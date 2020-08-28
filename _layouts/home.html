@@ -15,6 +15,9 @@ layout: default
 
     <div class="posts">
         {% for post in paginator.posts %}
+          {% for p in site.categories[page.category] %}
+            {{p}}
+          {% endfor %}
         <div class="post-teaser">
             {% if post.thumbnail %}
             <div class="post-img">
