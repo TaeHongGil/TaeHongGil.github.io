@@ -24,7 +24,6 @@ jekyll-theme-type-on-strap.gemspec
 
 # Node js files
 **/node_modules/*
-*-test.md
 *copy.md
 .jekyll-cache/*
 test/*
