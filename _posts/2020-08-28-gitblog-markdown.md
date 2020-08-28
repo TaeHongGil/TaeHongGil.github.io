@@ -2,8 +2,8 @@
 layout: post
 title: >
     git블로그 Markdown 문법 
-tags: [git, 블로그, markdown]
 categories: [git]
+tags: [git, 블로그, markdown]
 ---
 
 ## 제목 및 본문 작성
