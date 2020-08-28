@@ -271,10 +271,24 @@ Use this area of the page to describe your project. The icon above is part of a 
 
 <!-- Disqus -->
 
+<div class="comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_shortname = '';
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'https://hong-3.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view comments.</noscript>
+</div>
+
 
 <!-- Post navigation -->
 
-  <div id="post-nav">
+  
+<div id="post-nav">
     
     <div id="previous-post">
         <a alt="Github" href="/portfolio/gitlecture">
@@ -309,6 +323,7 @@ Use this area of the page to describe your project. The icon above is part of a 
 
     </div>
     <footer class="site-footer">
+
     <p class="text">
         2020. 08. 28 ~
 </p>

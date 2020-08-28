@@ -30,6 +30,7 @@ layout: default
 
   <!-- Tag list for portfolio -->
   {% capture tag_list %}{{ page.tags | join: "|"}}{% endcapture %}
+  {% include disqus.html %}
   {% include tags_list.html tags=tag_list %}
 
 </article>
