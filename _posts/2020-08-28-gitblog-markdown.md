@@ -2,6 +2,7 @@
 layout: post
 title: >
     git블로그 Markdown 문법 
+category: [git]
 tags: [git, 블로그, markdown]
 ---
 
