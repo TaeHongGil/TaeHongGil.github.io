@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+<div class="home">
+
+    <div id="main" class="call-out"
+         style="background-image: url('{{ site.header_feature_image | relative_url }}')">
+        <ul>
+         {% for category in site.categories %}
+            <li></li>{{category | first }}({{category | last | size}})</li>
+        {% endfor %}
+        </ul>
+    </div>
+
+    {% include blog.html %}
+
+</div>
