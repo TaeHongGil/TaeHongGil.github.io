@@ -15,6 +15,7 @@ layout: default
 
     <div class="posts">
         {% for post in site.categories[page.category] %}
+          {{post | first}}
         <div class="post-teaser">
             {% if post.thumbnail %}
             <div class="post-img">
