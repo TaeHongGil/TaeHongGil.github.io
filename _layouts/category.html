@@ -12,13 +12,11 @@ layout: default
         {% endfor %}
         </ul>
     </div>
-    {{page.category}}
-
+    {% for category in site.categories %}
+      {{category}}
+    {% endfor %}
     <div class="posts">
         {% for post in paginator.posts.categories[page.category] %}
-          {% for p in site.categories[page.category] %}
-            {{p}}
-          {% endfor %}
         <div class="post-teaser">
             {% if post.thumbnail %}
             <div class="post-img">
