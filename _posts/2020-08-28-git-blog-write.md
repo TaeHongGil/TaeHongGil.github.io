@@ -1,8 +1,8 @@
 ---
 layout: post
 title: >
-    Test 
-tags: [Test]
+    git 블로그 작성 방법 
+tags: [git, 블로그]
 ---
 
 ```bash
