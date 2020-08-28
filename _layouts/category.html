@@ -12,8 +12,12 @@ layout: default
         {% endfor %}
         </ul>
     </div>
-    {% for category in site.categories %}
-      {{category | first }}
+    {% for category in site.categories[page.category] %}
+      {{category}}
+    {% endfor %}
+    aa
+    {% for category in site.categories[page.category] %}
+      {{category}}
     {% endfor %}
 
     {% for post in site.categories[page.category] %}
