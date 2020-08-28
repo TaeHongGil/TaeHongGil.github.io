@@ -7,7 +7,7 @@ layout: default
     <div id="main" class="call-out"
          style="background-image: url('{{ site.header_feature_image | relative_url }}')">
         <ul>
-         {% for category in site.categories %}
+         {% for category in paginator.categories %}
             <li><a href ="/category/{{category | first}}">{{category | first }}</a></li>
         {% endfor %}
         </ul>
