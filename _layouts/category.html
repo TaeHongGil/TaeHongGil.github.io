@@ -12,15 +12,10 @@ layout: default
         {% endfor %}
         </ul>
     </div>
-    {% for category in site.categories[page.category] %}
-      {{category}}
-    {% endfor %}
-    aa
-    {% for category in site.categories[page.category] %}
-      {{category}}
-    {% endfor %}
 
-    {% for post in site.categories[page.category] %}
+    <div class="posts">
+        {% for post in site.categories %}
+        {{post|first}}
         <div class="post-teaser">
             {% if post.thumbnail %}
             <div class="post-img">
@@ -49,8 +44,9 @@ layout: default
               {% endif %}
           </span>
         </div>
-    {% endfor %}
-
+        {% endfor %}
+    </div>
+    
     {% include blog_nav.html %}
     
 </div>
