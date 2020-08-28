@@ -8,8 +8,8 @@ layout: default
          style="background-image: url('{{ site.header_feature_image | relative_url }}')">
         <ul>
          {% for category in site.categories %}
-            <li>{{category | first }}</li>
-        {% endfor %}
+            <li><a href> ="/category/{{category | first}}" {{category | first }}</a></li>
+         {% endfor %}
         </ul>
     </div>
 
