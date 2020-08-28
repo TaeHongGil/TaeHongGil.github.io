@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<!--
+    Type on Strap jekyll theme v2.2.5
+    Copyright 2016-2020 Sylhare
+    Theme free for personal and commercial use under the MIT license
+    https://github.com/sylhare/Type-on-Strap/blob/master/LICENSE
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Main JS (navbar.js, katex_init.js and masonry_init.js)-->
+    <script defer src="/assets/js/main.min.js"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="http://localhost:4000/git/2020/08/28/gitblog-markdown.html">
+
+    <!-- RSS -->
+    <link rel="alternate" type="application/atom+xml" title="Hong" href="http://localhost:4000/feed.xml"/>
+    
+    
+    <!-- KaTeX 0.12.0 -->
+    <!-- if you have any issue check https://github.com/KaTeX/KaTeX -->
+    
+    <script defer src="/assets/js/vendor/katex.min.js"></script>
+    <script defer src="/assets/js/vendor/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+    
+
+    <!-- Google Analytics / Cookie Consent -->
+    <script>
+      const cookieName = 'cookie-notice-dismissed-http://localhost:4000';
+      const isCookieConsent = 'false';
+      const analyticsName = '';
+    </script>
+
+    
+    
+
+    <!-- seo tags -->
+    <meta property="og:image" content="http://localhost:4000/">
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>git블로그 Markdown 문법 | Hong</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="git블로그 Markdown 문법" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="제목 및 본문 작성" />
+<meta property="og:description" content="제목 및 본문 작성" />
+<link rel="canonical" href="http://localhost:4000/git/2020/08/28/gitblog-markdown.html" />
+<meta property="og:url" content="http://localhost:4000/git/2020/08/28/gitblog-markdown.html" />
+<meta property="og:site_name" content="Hong" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-08-28T00:00:00+09:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","headline":"git블로그 Markdown 문법","dateModified":"2020-08-28T00:00:00+09:00","datePublished":"2020-08-28T00:00:00+09:00","url":"http://localhost:4000/git/2020/08/28/gitblog-markdown.html","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/git/2020/08/28/gitblog-markdown.html"},"description":"제목 및 본문 작성","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <!-- RSS -->
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Hong" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:title" content="git블로그 Markdown 문법 
+">
+    <meta name="twitter:description" content="제목 및 본문 작성#Test 제목 1##Test 제목 2###Test 제목 3Test 본문TestTestTestTest코드 블럭```언어 ex) python, js, java, c, ... 언어를 입력하지않으면 그대로print(hello world)```  print("hello ...">
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="http://localhost:4000/">
+</head>
+
+  <body>
+    <header class="site-header">
+
+    <!-- Logo and title -->
+	<div class="branding">
+        
+		<a href="/">
+			<img alt="logo img" class="avatar" src="/assets/img/triangle.png" />
+		</a>
+        
+
+		<h1 class="site-title">
+			<a aria-label="Hong" href="/">
+        Hong
+      </a>
+		</h1>
+	</div>
+
+    <!-- Toggle menu -->
+    <nav class="clear">
+    <a aria-label="pull" id="pull" class="toggle" href="#">
+    <i class="fa fa-bars fa-lg"></i>
+    </a>
+
+    <!-- Menu -->
+    <ul class="hide">
+        
+
+        
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="About" title="About" href="/about/">
+                     About 
+                </a>
+            </li>
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Gallery" title="Gallery" href="/gallery/">
+                     Gallery 
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Portfolio" title="Portfolio" href="/portfolio/">
+                     Portfolio 
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Search" title="Search" href="/search/">
+                     <i class="fa fa-search" aria-hidden="true"></i>
+                    
+                </a>
+            </li>
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Tags" title="Tags" href="/tags/">
+                     <i class="fa fa-tags" aria-hidden="true"></i>
+                    
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+    </ul>
+
+	</nav>
+</header>
+
+    <div class="content">
+      <article >
+  <header id="main" style="">
+    <div class="title-padder">
+      
+      <h1 id="git%EB%B8%94%EB%A1%9C%EA%B7%B8+Markdown+%EB%AC%B8%EB%B2%95+%0A" class="title">git블로그 Markdown 문법 
+</h1>
+      
+
+
+<div class="post-info">
+    <p class="meta">
+      August 28, 2020
+    </p></div>
+
+      
+    </div>
+  </header>
+
+  <section class="post-content">
+  
+      <h2 id="제목-및-본문-작성">제목 및 본문 작성</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#Test 제목 1
+##Test 제목 2
+###Test 제목 3
+Test 본문
+</code></pre></div></div>
+
+<h1 id="test">Test</h1>
+<h2 id="test-1">Test</h2>
+<h3 id="test-2">Test</h3>
+<p>Test</p>
+
+<p><br />
+<br />
+<br />
+<br /></p>
+
+<h2 id="코드-블럭">코드 블럭</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>```언어 ex) python, js, java, c, ... 언어를 입력하지않으면 그대로
+print(hello world)
+```  
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">"hello world"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>vscode를 사용 중인데 각자의 설정에 따라 글자색이 바뀌는 듯 합니다</p>
+
+<p><br />
+<br />
+<br />
+<br /></p>
+
+<h2 id="링크">링크</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>유형1(`설명어`를 클릭하면 URL로 이동) : [구글](https://google.com "마우스를 올려놓으면 말풍선이 나옵니다.")  
+유형2(URL 보여주고 `자동연결`) : &lt;https://google.com&gt;  
+유형3(동일 파일 내 `문단 이동`) : [문단 이동](##제목-및-본문-작성)
+
+문단 매칭방법 : 제목(header)를 복사 붙여넣기 후,
+1) 특수문자제거
+2) 스페이스를 갯수만큼 -로 변경
+3) 대문자-&gt;소문자로 변경
+예) “#Test! 테스트” -&gt; “#Test–테스트”  
+</code></pre></div></div>
+
+<p><a href="https://google.com" title="마우스를 올려놓으면 말풍선이 나옵니다.">구글</a><br />
+<a href="https://google.com">https://google.com</a><br />
+<a href="##제목-및-본문-작성">문단 이동</a></p>
+
+<p><br />
+<br />
+<br />
+<br /></p>
+
+    
+  </section>
+
+  <!-- Social media shares -->
+  
+
+<div class="share-buttons">
+    <ul class="share-buttons">
+        <div class="meta">Share</div>
+        
+        <li>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fgit%2F2020%2F08%2F28%2Fgitblog-markdown.html" target="_blank" title=" Facebook">
+			<i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Share on Facebook</span>
+		</a>
+        </li>
+         
+        <li>
+            <a href="https://twitter.com/intent/tweet?text=git%EB%B8%94%EB%A1%9C%EA%B7%B8+Markdown+%EB%AC%B8%EB%B2%95+%0A%20http%3A%2F%2Flocalhost%3A4000%2Fgit%2F2020%2F08%2F28%2Fgitblog-markdown.html" target="_blank" title="">
+			<i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Tweet</span>
+		</a>
+        </li>
+            
+        <li>
+            <a href="http://www.reddit.com/submit?url=http://localhost:4000/git/2020/08/28/gitblog-markdown.html&title=git%EB%B8%94%EB%A1%9C%EA%B7%B8+Markdown+%EB%AC%B8%EB%B2%95+%0A%20%7C%20Hong" target="_blank" title=" Reddit">
+			<i class="fa fa-reddit-square fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Share on Reddit</span>
+		</a>
+        </li>
+           
+        <li>
+            <a href="mailto:?subject=git%EB%B8%94%EB%A1%9C%EA%B7%B8+Markdown+%EB%AC%B8%EB%B2%95+%0A%20%7C%20Hong&body=:%20http://localhost:4000/git/2020/08/28/gitblog-markdown.html" target="_blank" title="">
+			<i class="fa fa-envelope-square fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Email</span>
+		</a>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+
+   <!-- Tag list -->
+  
+  
+
+
+<footer>
+  <div class="tag-list">
+    
+      <div class="meta">Tags</div>
+    
+
+    
+    <a class="button" href="/tags#git">
+      <p><i class="fa fa-tag fa-fw"></i> git</p>
+    </a>
+    
+    <a class="button" href="/tags#markdown">
+      <p><i class="fa fa-tag fa-fw"></i> markdown</p>
+    </a>
+    
+    <a class="button" href="/tags#%EB%B8%94%EB%A1%9C%EA%B7%B8">
+      <p><i class="fa fa-tag fa-fw"></i> 블로그</p>
+    </a>
+    
+  </div>
+</footer>
+
+
+</article>
+
+<!-- Disqus -->
+
+
+<!-- Post navigation -->
+
+  <div id="post-nav">
+    
+    <div id="previous-post">
+        <a alt="test python 
+" href="/python/2020/08/28/test.html">
+            <p>Previous post</p>
+            test python 
+
+        </a>
+    </div>
+    
+
+    
+</div>
+
+
+
+<!-- To change color of links in the page -->
+<style>
+  
+
+  header#main {
+    background-repeat:no-repeat;
+  
+  }
+</style>
+
+    </div>
+    <footer class="site-footer">
+    <p class="text">
+        2020. 08. 28 ~
+</p>
+            <div class="footer-icons">
+                <ul>
+                <!-- Social icons from Font Awesome, if enabled -->
+                
+
+
+<li>
+    <a href="mailto:kf08@naver.com" title="Email">
+		<span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+        </span>
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a href="https://github.com/TaeHongGil" title="Follow on GitHub">
+		<span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+        </span>
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </ul>
+            </div>
+</footer>
+
+
+
+  </body>
+</html>

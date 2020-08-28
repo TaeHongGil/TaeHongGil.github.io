@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-08-28T22:43:40+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Hong</title><subtitle>A website with blog posts and pages</subtitle><entry><title type="html">test python</title><link href="http://localhost:4000/python/2020/08/28/test.html" rel="alternate" type="text/html" title="test python 
+" /><published>2020-08-28T00:00:00+09:00</published><updated>2020-08-28T00:00:00+09:00</updated><id>http://localhost:4000/python/2020/08/28/test</id><content type="html" xml:base="http://localhost:4000/python/2020/08/28/test.html">&lt;p&gt;test&lt;/p&gt;</content><author><name></name></author><category term="git" /><category term="블로그" /><category term="markdown" /><summary type="html">test</summary></entry><entry><title type="html">git블로그 Markdown 문법</title><link href="http://localhost:4000/git/2020/08/28/gitblog-markdown.html" rel="alternate" type="text/html" title="git블로그 Markdown 문법 
+" /><published>2020-08-28T00:00:00+09:00</published><updated>2020-08-28T00:00:00+09:00</updated><id>http://localhost:4000/git/2020/08/28/gitblog-markdown</id><content type="html" xml:base="http://localhost:4000/git/2020/08/28/gitblog-markdown.html">&lt;h2 id=&quot;제목-및-본문-작성&quot;&gt;제목 및 본문 작성&lt;/h2&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#Test 제목 1
+##Test 제목 2
+###Test 제목 3
+Test 본문
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;test&quot;&gt;Test&lt;/h1&gt;
+&lt;h2 id=&quot;test-1&quot;&gt;Test&lt;/h2&gt;
+&lt;h3 id=&quot;test-2&quot;&gt;Test&lt;/h3&gt;
+&lt;p&gt;Test&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;코드-블럭&quot;&gt;코드 블럭&lt;/h2&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;```언어 ex) python, js, java, c, ... 언어를 입력하지않으면 그대로
+print(hello world)
+```  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;hello world&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;vscode를 사용 중인데 각자의 설정에 따라 글자색이 바뀌는 듯 합니다&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;링크&quot;&gt;링크&lt;/h2&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;유형1(`설명어`를 클릭하면 URL로 이동) : [구글](https://google.com &quot;마우스를 올려놓으면 말풍선이 나옵니다.&quot;)  
+유형2(URL 보여주고 `자동연결`) : &amp;lt;https://google.com&amp;gt;  
+유형3(동일 파일 내 `문단 이동`) : [문단 이동](##제목-및-본문-작성)
+
+문단 매칭방법 : 제목(header)를 복사 붙여넣기 후,
+1) 특수문자제거
+2) 스페이스를 갯수만큼 -로 변경
+3) 대문자-&amp;gt;소문자로 변경
+예) “#Test! 테스트” -&amp;gt; “#Test–테스트”  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://google.com&quot; title=&quot;마우스를 올려놓으면 말풍선이 나옵니다.&quot;&gt;구글&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://google.com&quot;&gt;https://google.com&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;##제목-및-본문-작성&quot;&gt;문단 이동&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;</content><author><name></name></author><category term="git" /><category term="블로그" /><category term="markdown" /><summary type="html">제목 및 본문 작성</summary></entry></feed>
