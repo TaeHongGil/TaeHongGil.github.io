@@ -2,7 +2,7 @@
 layout: post
 title: >
     git블로그 Markdown 문법 
-tags: [git, 블로그]
+tags: [git, 블로그, markdown]
 ---
 
 
@@ -16,11 +16,11 @@ tags: [git, 블로그]
 ### Test
 Test
 
-#
-#
+<br/>
+<br/>
 ---
-#
-#
+<br/>
+<br/>
 
 ## 코드 블럭
     ```언어 ex) python, js, java, c, ... 언어를 입력하지않으면 그대로
@@ -31,11 +31,11 @@ print("hello world")
 ```  
 vscode를 사용 중인데 각자의 설정에 따라 글자색이 바뀌는 듯 합니다
 
-#
-#
+<br/>
+<br/>
 ---
-#
-#
+<br/>
+<br/>
 
 ## 링크
     유형1(`설명어`를 클릭하면 URL로 이동) : [구글](https://google.com "마우스를 올려놓으면 말풍선이 나옵니다.")  
@@ -52,8 +52,8 @@ vscode를 사용 중인데 각자의 설정에 따라 글자색이 바뀌는 듯
 <https://google.com>  
 [문단 이동](##제목-및-본문-작성)  
 
-#
-#
+<br/>
+<br/>
 ---
-#
-#
+<br/>
+<br/>
