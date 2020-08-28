@@ -10,16 +10,7 @@ layout: default
          {% for category in site.categories %}
             <li><a href ="/category/{{category | first}}">{{category | first }}</a></li>
         {% endfor %}
-        
         </ul>
-        {% for p in site.categories[page.category] %}
-        {{page.category}}
-        {% endfor %}
-        
-        {% for p in site.categories %}
-        {{p | first}}
-        {% endfor %}
-
     </div>
 
     <div class="posts">
