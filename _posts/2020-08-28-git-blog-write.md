@@ -11,16 +11,14 @@ tags: [git, 블로그]
 ###Test
 Test
 ```
-Test
 # Test
 ## Test
 ### Test
+Test
 
 
-```bash
-"```언어 ex) python, js, java, c, ..."
+```언어 ex) python, js, java, c, ...
 print("hello world")
-"```"
 ```
 
 ```python
