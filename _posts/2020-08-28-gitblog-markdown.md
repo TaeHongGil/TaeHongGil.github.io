@@ -11,12 +11,13 @@ tags: [git, 블로그]
     ##Test 제목 2
     ###Test 제목 3
     Test 본문
+
 # Test
 ## Test
 ### Test
 Test
 
----
+---  
 
 # 코드 블럭
     ```언어 ex) python, js, java, c, ... 언어를 입력하지않으면 그대로
@@ -25,10 +26,10 @@ Test
 
 ```python
 print("hello world")
-```
+```  
 vscode를 사용 중인데 각자의 설정에 따라 글자색이 바뀌는 듯 합니다
 
----
+---  
 
     링크
     유형1(`설명어`를 클릭하면 URL로 이동) : [구글](https://google.com "마우스를 올려놓으면 말풍선이 나옵니다.")  
