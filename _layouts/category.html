@@ -7,15 +7,15 @@ layout: default
     <div id="main" class="call-out"
          style="background-image: url('{{ site.header_feature_image | relative_url }}')">
         <ul>
-         {% for category in paginator.categories %}
+         {% for category in site.categories %}
             <li><a href ="/category/{{category | first}}">{{category | first }}</a></li>
         {% endfor %}
         </ul>
     </div>
 
     <div class="posts">
-        {% for post in paginator.categories[page.category] %}
-        {{post | first}}
+        {% for post in site.categories[page.category] %}
+        {{post}}
         <div class="post-teaser">
             {% if post.thumbnail %}
             <div class="post-img">
