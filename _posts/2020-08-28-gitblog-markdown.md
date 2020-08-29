@@ -4,9 +4,6 @@ title: >
     git블로그 Markdown 문법 
 categories: [Git]
 tags: [git, blog, jekyll]
-sitemap :
-  changefreq : daily
-  priority : 1.0
 ---
 
 ## 제목 및 본문 작성
