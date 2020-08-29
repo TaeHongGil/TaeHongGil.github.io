@@ -1,5 +1,87 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-08-29T01:59:10+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Hong</title><subtitle>A website with blog posts and pages</subtitle><entry><title type="html">test python</title><link href="http://localhost:4000/python/2020/08/28/test.html" rel="alternate" type="text/html" title="test python 
-" /><published>2020-08-28T00:00:00+09:00</published><updated>2020-08-28T00:00:00+09:00</updated><id>http://localhost:4000/python/2020/08/28/test</id><content type="html" xml:base="http://localhost:4000/python/2020/08/28/test.html">&lt;p&gt;test&lt;/p&gt;</content><author><name></name></author><category term="git" /><category term="블로그" /><category term="markdown" /><summary type="html">test</summary></entry><entry><title type="html">git블로그 Markdown 문법</title><link href="http://localhost:4000/git/2020/08/28/gitblog-markdown.html" rel="alternate" type="text/html" title="git블로그 Markdown 문법 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-08-29T15:53:03+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Hong</title><subtitle>A website with blog posts and pages</subtitle><entry><title type="html">git블로그 category 만드는 법</title><link href="http://localhost:4000/git/2020/08/29/gitblog-category.html" rel="alternate" type="text/html" title="git블로그 category 만드는 법
+" /><published>2020-08-29T00:00:00+09:00</published><updated>2020-08-29T00:00:00+09:00</updated><id>http://localhost:4000/git/2020/08/29/gitblog-category</id><content type="html" xml:base="http://localhost:4000/git/2020/08/29/gitblog-category.html">&lt;p&gt;&lt;span style=&quot;color:red&quot;&gt;&lt;strong&gt;모든 테마가 같은 파일이름/코드를 사용하지 않습니다.&lt;/strong&gt;&lt;/span&gt;
+&lt;br /&gt; 
+&lt;span style=&quot;color:red&quot;&gt;&lt;strong&gt;비슷한 코드를 찾으시면 쉽게 하실수 있습니다&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;1category폴더-만들기&quot;&gt;1.category폴더 만들기&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/gitblog-category/1.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;category 폴더를 만든 뒤 category목록을 작성해줍니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/gitblog-category/2.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;category목록안의 내용입니다. layout은 후에 작성합니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;2post에-categories추가&quot;&gt;2.post에 categories추가&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/gitblog-category/3.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;post에 categories를 추가해줍니다.&lt;/p&gt;
+
+&lt;p&gt;이 categories를 가져오는 변수는 site.categories 입니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;3homehtmlindex-수정하기&quot;&gt;3.home.html(index) 수정하기&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/gitblog-category/4.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;원하는 부분에 (저는 상단)&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;ul&amp;gt;&lt;/span&gt;
+    { % for category in site.categories % }
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href =&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/category/{ {category | first} }&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;{ {category | first } }&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+    { % endfor % }
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/ul&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;코드를 추가해줍니다.
+&lt;span style=&quot;color:red&quot;&gt;&lt;strong&gt;(중괄호 앞 뒤 띄워쓰기 제외)&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&lt;/span&gt;{ {category | first } }&lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;이 부분에서 site.categories를 category변수에 하나씩넣어 리스트를 출력합니다.&lt;/p&gt;
+
+&lt;p&gt;category에는 여러 값이 들어가기때문에 first 를 사용하여 category명만 사용합니다.&lt;/p&gt;
+
+&lt;p&gt;하이퍼링크는 category폴더 안에있는 선택(클릭)한 category를 불러옵니다.&lt;br /&gt;
+ex)Git클릭시 caregory/Git&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;4category-layout-만들기&quot;&gt;4.category layout 만들기&lt;/h2&gt;
+
+&lt;p&gt;layout폴더에 category.html 파일을 만들어 준뒤 home.html파일의 내용을 복사합니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/gitblog-category/5.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;보시면 이런식으로 post목록을 불러오는 코드가 있습니다.
+&lt;span style=&quot;color:red&quot;&gt;&lt;strong&gt;(다른 파일에 있을 수도 있습니다.)&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/gitblog-category/6.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;이렇게 수정해줍니다.&lt;/p&gt;
+
+&lt;p&gt;{ % for post in site.categories[page.category] % }&lt;/p&gt;
+
+&lt;p&gt;post마다 있는 categories를 비교하여 현재 선택(클릭한) 카테고리를 포함한 post 목록을 post(변수)에 저장합니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;5css-수정&quot;&gt;5.css 수정&lt;/h2&gt;
+&lt;p&gt;마지막으로 css를 수정하면&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/gitblog-category/7.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;완성!&lt;/p&gt;</content><author><name></name></author><category term="git" /><category term="블로그" /><summary type="html">모든 테마가 같은 파일이름/코드를 사용하지 않습니다. 비슷한 코드를 찾으시면 쉽게 하실수 있습니다</summary></entry><entry><title type="html">git블로그 Markdown 문법</title><link href="http://localhost:4000/git/2020/08/28/gitblog-markdown.html" rel="alternate" type="text/html" title="git블로그 Markdown 문법 
 " /><published>2020-08-28T00:00:00+09:00</published><updated>2020-08-28T00:00:00+09:00</updated><id>http://localhost:4000/git/2020/08/28/gitblog-markdown</id><content type="html" xml:base="http://localhost:4000/git/2020/08/28/gitblog-markdown.html">&lt;h2 id=&quot;제목-및-본문-작성&quot;&gt;제목 및 본문 작성&lt;/h2&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#Test 제목 1
@@ -14,8 +96,6 @@ Test 본문
 &lt;p&gt;Test&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;
 &lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;코드-블럭&quot;&gt;코드 블럭&lt;/h2&gt;
@@ -28,11 +108,7 @@ print(hello world)
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;hello world&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;vscode를 사용 중인데 각자의 설정에 따라 글자색이 바뀌는 듯 합니다&lt;/p&gt;
-
 &lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;
 &lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;링크&quot;&gt;링크&lt;/h2&gt;
@@ -44,14 +120,159 @@ print(hello world)
 1) 특수문자제거
 2) 스페이스를 갯수만큼 -로 변경
 3) 대문자-&amp;gt;소문자로 변경
-예) “#Test! 테스트” -&amp;gt; “#Test–테스트”  
+4) 영문만 가능
+예) “#Test! 테스트” -&amp;gt; “#test–테스트”  
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://google.com&quot; title=&quot;마우스를 올려놓으면 말풍선이 나옵니다.&quot;&gt;구글&lt;/a&gt;&lt;br /&gt;
 &lt;a href=&quot;https://google.com&quot;&gt;https://google.com&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;##제목-및-본문-작성&quot;&gt;문단 이동&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&quot;#test&quot;&gt;문단 이동&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;</content><author><name></name></author><category term="git" /><category term="블로그" /><category term="markdown" /><summary type="html">제목 및 본문 작성</summary></entry></feed>
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;단어-강조&quot;&gt;단어 강조&lt;/h2&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;**두껍게** / __두껍게__
+*이텔릭체* / _이텔릭체_
+~~취소선~~
+&amp;lt;u&amp;gt;밑줄&amp;lt;/u&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;두껍게&lt;/strong&gt; / &lt;strong&gt;두껍게&lt;/strong&gt;&lt;br /&gt;
+&lt;em&gt;이텔릭체&lt;/em&gt; / &lt;em&gt;이텔릭체&lt;/em&gt;&lt;br /&gt;
+&lt;del&gt;취소선&lt;/del&gt;&lt;br /&gt;
+&lt;u&gt;밑줄&lt;/u&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;개행&quot;&gt;개행&lt;/h2&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;문장 끝에 &quot;  &quot; (스페이스 두번)
+&amp;lt;br/&amp;gt;  (여러줄개행)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;리스트&quot;&gt;리스트&lt;/h2&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. 순서
+2. 순서
+    - 순서(서브) 
+    - 순서(서브) 
+4. 순서
+    1. 순서(서브)
+    2. 순서(서브)
+3. 순서
+
+입력한 숫자와 관계없이 순서대로 
+
+- 순서에 사용 가능한 기호
+    - 대쉬(hyphen)
+    * 별표(asterisks)
+    + 더하기(plus sign)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;순서&lt;/li&gt;
+  &lt;li&gt;순서
+    &lt;ul&gt;
+      &lt;li&gt;순서(서브)&lt;/li&gt;
+      &lt;li&gt;순서(서브)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;순서
+    &lt;ol&gt;
+      &lt;li&gt;순서(서브)&lt;/li&gt;
+      &lt;li&gt;순서(서브)&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;순서&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;서브에 사용 가능한 기호
+    &lt;ul&gt;
+      &lt;li&gt;대쉬(hyphen)&lt;/li&gt;
+      &lt;li&gt;별표(asterisks)&lt;/li&gt;
+      &lt;li&gt;더하기(plus sign)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;이미지--이미지-링크&quot;&gt;이미지 / 이미지 링크&lt;/h2&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;![img](/assets/img/triangle.png)
+[![img](/assets/img/triangle.png)](https://google.com)
+위의 두가지 문법은 이미지크기 조정 X
+&amp;lt;img src = &quot;/assets/img/triangle.png&quot; width=&quot;40%&quot;&amp;gt;
+&amp;lt;a href = &quot;https://google.com&quot;&amp;gt;&amp;lt;img src = &quot;/assets/img/triangle.png&quot; width=&quot;40%&quot;&amp;gt;&amp;lt;/a&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/triangle.png&quot; width=&quot;40%&quot; /&gt;   &lt;br /&gt;
+&lt;a href=&quot;https://google.com&quot;&gt;&lt;img src=&quot;/assets/img/triangle.png&quot; width=&quot;40%&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;표&quot;&gt;표&lt;/h2&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;값 | 의미 | 기본값
+---|:---:|---:
+1 | 일| 1
+2 | 이| 2
+3 | 삼| 3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;값&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;의미&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;기본값&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;일&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;이&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;삼&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;3&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;그-외&quot;&gt;그 외&lt;/h2&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;인용문
+&amp;gt;&amp;gt;인용문
+&amp;gt;&amp;gt;&amp;gt;인용문
+---구분선
+***구분선
+___구분선
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;인용문&lt;/p&gt;
+  &lt;blockquote&gt;
+    &lt;p&gt;인용문&lt;/p&gt;
+    &lt;blockquote&gt;
+      &lt;p&gt;인용문&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/blockquote&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;hr /&gt;
+
+&lt;hr /&gt;</content><author><name></name></author><category term="git" /><category term="블로그" /><summary type="html">제목 및 본문 작성</summary></entry><entry><title type="html">test python</title><link href="http://localhost:4000/python/2020/08/28/test.html" rel="alternate" type="text/html" title="test python 
+" /><published>2020-08-28T00:00:00+09:00</published><updated>2020-08-28T00:00:00+09:00</updated><id>http://localhost:4000/python/2020/08/28/test</id><content type="html" xml:base="http://localhost:4000/python/2020/08/28/test.html">&lt;p&gt;test&lt;/p&gt;</content><author><name></name></author><category term="git" /><category term="블로그" /><category term="markdown" /><summary type="html">test</summary></entry></feed>

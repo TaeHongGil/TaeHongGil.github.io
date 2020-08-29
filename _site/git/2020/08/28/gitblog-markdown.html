@@ -214,8 +214,6 @@ Test 본문
 <p>Test</p>
 
 <p><br />
-<br />
-<br />
 <br /></p>
 
 <h2 id="코드-블럭">코드 블럭</h2>
@@ -228,11 +226,7 @@ print(hello world)
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">"hello world"</span><span class="p">)</span>
 </code></pre></div></div>
 
-<p>vscode를 사용 중인데 각자의 설정에 따라 글자색이 바뀌는 듯 합니다</p>
-
 <p><br />
-<br />
-<br />
 <br /></p>
 
 <h2 id="링크">링크</h2>
@@ -244,17 +238,161 @@ print(hello world)
 1) 특수문자제거
 2) 스페이스를 갯수만큼 -로 변경
 3) 대문자-&gt;소문자로 변경
-예) “#Test! 테스트” -&gt; “#Test–테스트”  
+4) 영문만 가능
+예) “#Test! 테스트” -&gt; “#test–테스트”  
 </code></pre></div></div>
 
 <p><a href="https://google.com" title="마우스를 올려놓으면 말풍선이 나옵니다.">구글</a><br />
 <a href="https://google.com">https://google.com</a><br />
-<a href="##제목-및-본문-작성">문단 이동</a></p>
+<a href="#test">문단 이동</a></p>
 
 <p><br />
-<br />
-<br />
 <br /></p>
+
+<h2 id="단어-강조">단어 강조</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>**두껍게** / __두껍게__
+*이텔릭체* / _이텔릭체_
+~~취소선~~
+&lt;u&gt;밑줄&lt;/u&gt;
+</code></pre></div></div>
+
+<p><strong>두껍게</strong> / <strong>두껍게</strong><br />
+<em>이텔릭체</em> / <em>이텔릭체</em><br />
+<del>취소선</del><br />
+<u>밑줄</u></p>
+
+<p><br />
+<br /></p>
+
+<h2 id="개행">개행</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>문장 끝에 "  " (스페이스 두번)
+&lt;br/&gt;  (여러줄개행)
+</code></pre></div></div>
+
+<p><br />
+<br /></p>
+
+<h2 id="리스트">리스트</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. 순서
+2. 순서
+    - 순서(서브) 
+    - 순서(서브) 
+4. 순서
+    1. 순서(서브)
+    2. 순서(서브)
+3. 순서
+
+입력한 숫자와 관계없이 순서대로 
+
+- 순서에 사용 가능한 기호
+    - 대쉬(hyphen)
+    * 별표(asterisks)
+    + 더하기(plus sign)
+</code></pre></div></div>
+
+<ol>
+  <li>순서</li>
+  <li>순서
+    <ul>
+      <li>순서(서브)</li>
+      <li>순서(서브)</li>
+    </ul>
+  </li>
+  <li>순서
+    <ol>
+      <li>순서(서브)</li>
+      <li>순서(서브)</li>
+    </ol>
+  </li>
+  <li>순서</li>
+</ol>
+
+<ul>
+  <li>서브에 사용 가능한 기호
+    <ul>
+      <li>대쉬(hyphen)</li>
+      <li>별표(asterisks)</li>
+      <li>더하기(plus sign)</li>
+    </ul>
+  </li>
+</ul>
+
+<p><br />
+<br /></p>
+
+<h2 id="이미지--이미지-링크">이미지 / 이미지 링크</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>![img](/assets/img/triangle.png)
+[![img](/assets/img/triangle.png)](https://google.com)
+위의 두가지 문법은 이미지크기 조정 X
+&lt;img src = "/assets/img/triangle.png" width="40%"&gt;
+&lt;a href = "https://google.com"&gt;&lt;img src = "/assets/img/triangle.png" width="40%"&gt;&lt;/a&gt;
+</code></pre></div></div>
+
+<p><img src="/assets/img/triangle.png" width="40%" />   <br />
+<a href="https://google.com"><img src="/assets/img/triangle.png" width="40%" /></a></p>
+
+<p><br />
+<br /></p>
+
+<h2 id="표">표</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>값 | 의미 | 기본값
+---|:---:|---:
+1 | 일| 1
+2 | 이| 2
+3 | 삼| 3
+</code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>값</th>
+      <th style="text-align: center">의미</th>
+      <th style="text-align: right">기본값</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td style="text-align: center">일</td>
+      <td style="text-align: right">1</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td style="text-align: center">이</td>
+      <td style="text-align: right">2</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td style="text-align: center">삼</td>
+      <td style="text-align: right">3</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="그-외">그 외</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;인용문
+&gt;&gt;인용문
+&gt;&gt;&gt;인용문
+---구분선
+***구분선
+___구분선
+</code></pre></div></div>
+
+<blockquote>
+  <p>인용문</p>
+  <blockquote>
+    <p>인용문</p>
+    <blockquote>
+      <p>인용문</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<hr />
+
+<hr />
+
+<hr />
 
     
   </section>
@@ -314,10 +452,6 @@ print(hello world)
     
     <a class="button" href="/tags#git">
       <p><i class="fa fa-tag fa-fw"></i> git</p>
-    </a>
-    
-    <a class="button" href="/tags#markdown">
-      <p><i class="fa fa-tag fa-fw"></i> markdown</p>
     </a>
     
     <a class="button" href="/tags#%EB%B8%94%EB%A1%9C%EA%B7%B8">
