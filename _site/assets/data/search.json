@@ -1,33 +1,13 @@
 [
   
   {
-    "title"    : "test Python",
+    "title"    : "Algorism 풀이 시 유용한 Python 함수",
     "category" : "",
-    "tags"     : " ",
-    "url"      : "/python/2020/08/29/test-python.html",
+    "tags"     : " Python, Algorism",
+    "url"      : "/python/2020/08/29/python-algorism.html",
     "date"     : "August 29, 2020",
-    "excerpt"  : "\n",
-  "content"  : "\n"
-} ,
-  
-  {
-    "title"    : "test Java",
-    "category" : "",
-    "tags"     : " ",
-    "url"      : "/java/2020/08/29/test-java.html",
-    "date"     : "August 29, 2020",
-    "excerpt"  : "\n",
-  "content"  : "\n"
-} ,
-  
-  {
-    "title"    : "test C",
-    "category" : "",
-    "tags"     : " ",
-    "url"      : "/c/2020/08/29/test-c.html",
-    "date"     : "August 29, 2020",
-    "excerpt"  : "\n",
-  "content"  : "\n"
+    "excerpt"  : "순열 조합\nfrom itertools import permutations,combinations\n\n\n\n\n\n에라토스테네스의 체 (소수 구하기)\nprime=[True]*(int(max))\nm=int(max)**0.5) #최대약수\nfor i in range(2, m + 1):\n    if prime[i] == True:  # i가 소수인 경우\n        for j in range(i + i, (max), i):  # i이후 i의 배수들을 F...",
+  "content"  : "순열 조합\nfrom itertools import permutations,combinations\n\n\n\n\n\n에라토스테네스의 체 (소수 구하기)\nprime=[True]*(int(max))\nm=int(max)**0.5) #최대약수\nfor i in range(2, m + 1):\n    if prime[i] == True:  # i가 소수인 경우\n        for j in range(i + i, (max), i):  # i이후 i의 배수들을 False 판정\n            prime[j] = False\n\nmax+1크기의 True 배열을 만들고 소수의 배수번째 배열을 False로 만드는 방법.\n\n\n\n\nmap(함수,리스트)\n\n리스트 값에 함수를 적용.\nli = [1, 2, 3]\nresult = list(map(lambda i: i ** 2 , li))\n\n\nresult = [1, 4, 9]\n\n\n\n\n힙정렬\n\n완전 이진 트리의 일종으로 우선순위 큐를 위하여 만들어진 자료구조\n최댓값, 최솟값을 쉽게 추출할 수 있는 자료구조\n\n\nimport heapq\n\n\n\n\n\nset (집합 자료형)\n\nlist(set(asd)) &amp;gt; asd리스트의 중복제거\ns1 &amp;amp; s2 교집합\ns1 | s2  합집합\ns1 - s2 차집합\n\n\n\n\nenumerate\nfor i, v in enumerate(&quot;Hello World&quot;):\n\tprint(&quot;index : {}, value: {}&quot;.format(i,v)) #인덱스번호와 값 출력\n\nindex : 0, value: H\t\t\nindex : 1, value: e\nindex : 2, value: l\nindex : 3, value: l\nindex : 4, value: o\nindex : 5, value:  \n...\n\n\n\n\n\nCounter\nfrom collections import Counter\nlst = [&#39;aa&#39;, &#39;cc&#39;, &#39;dd&#39;, &#39;aa&#39;, &#39;bb&#39;, &#39;ee&#39;]\nprint(collections.Counter(lst))\n\n출력문\nCounter({&#39;aa&#39;: 2, &#39;cc&#39;: 1, &#39;dd&#39;: 1, &#39;bb&#39;: 1, &#39;ee&#39;: 1})\n\n\n인자의 갯수를 세서 딕셔너리로 만들어 주는 함수.\n\n\n\n\nredusce\nfrom functools import reduce\nreduce(lambda x, y: x + list, [0, 1, 2, 3, 4],0)\n\nfrom functools import reduce\nreduce(lambda x, y: x + list, [list],x값)\nx의 값에 list의 값을 순서대로 더한다.\n\n\n\n\n\nfilter\nfilter(lambda x: x &amp;lt; 5, range(10)) # [0, 1, 2, 3, 4]  \n\n\n\n\n\nsplit\nsplit(sep)\n\n문자열을 sep으로 잘라서 리스트에 넣는다.\n+maxsplit옵션\n\n\n\n\n정규식\nimport re\n\n\\d - 숫자와 매치, [0-9]와 동일한 표현식이다.\n\\D - 숫자가 아닌 것과 매치, [^0-9]와 동일한 표현식이다.\n\\s - whitespace 문자와 매치, [ \\t\\n\\r\\f\\v]와 동일한 표현식이다. 맨 앞의 빈 칸은 공백문자(space)를 의미한다.\n\\S - whitespace 문자가 아닌 것과 매치, [^ \\t\\n\\r\\f\\v]와 동일한 표현식이다.\n\\w - 문자+숫자(alphanumeric)와 매치, [a-zA-Z0-9_]와 동일한 표현식이다.\n\\W - 문자+숫자(alphanumeric)가 아닌 문자와 매치, [^a-zA-Z0-9_]와 동일한 표현식이다.\n\n\nmatch Object\nmatch(pattern, string)\t문자열의 처음부터 정규식과 매치되는지 조사한다.\nsearch(pattern, string)\t문자열 전체를 검색하여 정규식과 매치되는지 조사한다.\nfindall(pattern, string)\t정규식과 매치되는 모든 문자열(substring)을 리스트로 돌려준다.\nfinditer(pattern, string)\t정규식과 매치되는 모든 문자열(substring)을 반복 가능한 객체로 돌려준다.\n\nmatch Object의 메서드들\ngroup()\t일치된 문자열을 반환한다.\nstart()\t일치된 문자열의 시작 위치를 반환한다.\nend()\t일치된 문자열의 끝 위치를 반환한다.\nspan()\t일치된 문자열의 (시작 위치, 끝 위치) 튜플을 반환한다.\n\n\n\n\nformat\nformat(42, &#39;b&#39;) #&#39;101010&#39;\nformat(42, &#39;o&#39;) #&#39;52&#39;\nformat(42, &#39;x&#39;) #&#39;2a&#39;\nformat(42, &#39;X&#39;) #&#39;2A&#39;\nformat(42, &#39;d&#39;) #&#39;42&#39;\n\n\n\n\n\nmath\nimport math\nmath.gcd(a,b) #a,b의 최대공약수\nmath.lcm(a,b) #a,b의 최소공배수\nmath.sqrt(a) #a의 제곱근\n\n\n\n\n\nalphabet list만들기\nimport string\nlist(string.ascii_uppercase) #대문자알파벳리스트\nlist(string.ascii_lowercase) #소문자알파벳리스트\n\n\n\n\n\n기타\nlist(zip(*arr2))  #행&amp;gt;열 변환  \neval(&quot;100+200&quot;)  #문자열수식계산  \nabs(-1)&amp;gt;  #절댓값  \ns.title()  #주어진 문자열에서 알파벳 외의 문자(숫자, 특수기호, 띄어쓰기 등)로 나누어져 있는 영단어들의 첫 글자를 모두 대문자로 변환시킨다.  \ns.capitalize()  #주어진 문자열에서 맨 첫 글자를 대문자로 변환시킨다.\n\n"
 } ,
   
   {
@@ -41,6 +21,16 @@
 } ,
   
   {
+    "title"    : "Dynamic Programming algorism (DP)",
+    "category" : "",
+    "tags"     : " Algorism",
+    "url"      : "/algorism/2020/08/29/dp-algorism.html",
+    "date"     : "August 29, 2020",
+    "excerpt"  : "Dynamic Programming\n\nDP(동적 계획법)는 복잡한 문제를 간단한 여러 개의 문제로 나누어 푸는 방법을 말한다.\n\nDP의 원리는 일반적으로 주어진 문제를 풀기 위해서, 문제를 여러 개의 하위 문제로 나누어 푼 다음,\n그것을 결합하여 최종적인 목적에 도달하는 것이다.\n\n대표적인 예로 피보나치 수열이 있다.\n\n\n\n\n피보나치 수열\n\n\n\nint fibo(int x):\n    if(x &amp;lt;= 2):\n        return 1\n...",
+  "content"  : "Dynamic Programming\n\nDP(동적 계획법)는 복잡한 문제를 간단한 여러 개의 문제로 나누어 푸는 방법을 말한다.\n\nDP의 원리는 일반적으로 주어진 문제를 풀기 위해서, 문제를 여러 개의 하위 문제로 나누어 푼 다음,\n그것을 결합하여 최종적인 목적에 도달하는 것이다.\n\n대표적인 예로 피보나치 수열이 있다.\n\n\n\n\n피보나치 수열\n\n\n\nint fibo(int x):\n    if(x &amp;lt;= 2):\n        return 1\n    return fibo(x-1) + fibo(x-2)\n\n\n위의 함수에서 x=5 일때\n\nfibo(1)\nfibo(2)\nfibo(1) + fibo(2)\nfibo(2) + (fibo(1) + fibo(2))  \n(fibo(1) + fibo(2)) + (fibo(2) + (fibo(1) + fibo(2)))  \n\n\n위와 같이 재귀함수가 실행된다.\n\n매번 계산했던 값을 다시 계산하게 되는데\n\n이 때 효율을 높이기 위한 방법으로\n\nDP의 핵심 기술인 memoization(메모이제이션)이 있다.\n\n\n\n\nmemoization(메모이제이션)\n\n다음은 fibo함수의 효율을 높인 코드이다.\n\nint f = [0] * 100\n\nint fibo(int x):\n    if(x &amp;lt;= 2):\n        return 1\n\n    if(f[x] != 0):\n        return f[x]\n\n    else:\n        f[x] = fibo(x-1) + fibo(x-2)\n        return f[x]\n\n\nx = 5 일 때 위의 코드는 아래와 같이 실행된다.\n\nf[1] = fibo(1)\nf[2] = fibo(2)\nf[3] = f[1] + f[2] = fibo(3)\nf[4] = f[2] + f[3] = fibo(4)\nf[5] = f[3] + f[4] = fibo(5)\n\n\n이렇게 주어진 입력값에 대한 결과를 저장함으로써 같은 입력값에 대해 함수가 한 번만 실행되게 하는 것을\n\nmemoization이라고 한다.\n"
+} ,
+  
+  {
     "title"    : "git블로그 Markdown 문법 ",
     "category" : "",
     "tags"     : " git, blog, jekyll",
@@ -48,6 +38,26 @@
     "date"     : "August 28, 2020",
     "excerpt"  : "제목 및 본문 작성\n\n#Test 제목 1\n##Test 제목 2\n###Test 제목 3\nTest 본문\n\n\nTest\nTest\nTest\nTest\n\n\n\n\n코드 블럭\n\n```언어 ex) python, js, java, c, ... 언어를 입력하지않으면 그대로\nprint(hello world)\n```  \n\n\nprint(&quot;hello world&quot;)\n\n\n\n\n\n링크\n유형1(`설명어`를 클릭하면 URL로 이동) : [구글](https://google.com ...",
   "content"  : "제목 및 본문 작성\n\n#Test 제목 1\n##Test 제목 2\n###Test 제목 3\nTest 본문\n\n\nTest\nTest\nTest\nTest\n\n\n\n\n코드 블럭\n\n```언어 ex) python, js, java, c, ... 언어를 입력하지않으면 그대로\nprint(hello world)\n```  \n\n\nprint(&quot;hello world&quot;)\n\n\n\n\n\n링크\n유형1(`설명어`를 클릭하면 URL로 이동) : [구글](https://google.com &quot;마우스를 올려놓으면 말풍선이 나옵니다.&quot;)  \n유형2(URL 보여주고 `자동연결`) : &amp;lt;https://google.com&amp;gt;  \n유형3(동일 파일 내 `문단 이동`) : [문단 이동](##제목-및-본문-작성)\n\n문단 매칭방법 : 제목(header)를 복사 붙여넣기 후,\n1) 특수문자제거\n2) 스페이스를 갯수만큼 -로 변경\n3) 대문자-&amp;gt;소문자로 변경\n4) 영문만 가능\n예) “#Test! 테스트” -&amp;gt; “#test–테스트”  \n\n\n구글\nhttps://google.com\n문단 이동\n\n\n\n\n단어 강조\n**두껍게** / __두껍게__\n*이텔릭체* / _이텔릭체_\n~~취소선~~\n&amp;lt;u&amp;gt;밑줄&amp;lt;/u&amp;gt;\n\n\n두껍게 / 두껍게\n이텔릭체 / 이텔릭체\n취소선\n밑줄\n\n\n\n\n개행\n문장 끝에 &quot;  &quot; (스페이스 두번)\n&amp;lt;br/&amp;gt;  (여러줄개행)\n\n\n\n\n\n리스트\n1. 순서\n2. 순서\n    - 순서(서브) \n    - 순서(서브) \n4. 순서\n    1. 순서(서브)\n    2. 순서(서브)\n3. 순서\n\n입력한 숫자와 관계없이 순서대로 \n\n- 순서에 사용 가능한 기호\n    - 대쉬(hyphen)\n    * 별표(asterisks)\n    + 더하기(plus sign)\n\n\n\n  순서\n  순서\n    \n      순서(서브)\n      순서(서브)\n    \n  \n  순서\n    \n      순서(서브)\n      순서(서브)\n    \n  \n  순서\n\n\n\n  서브에 사용 가능한 기호\n    \n      대쉬(hyphen)\n      별표(asterisks)\n      더하기(plus sign)\n    \n  \n\n\n\n\n\n이미지 / 이미지 링크\n![img](/assets/img/triangle.png)\n[![img](/assets/img/triangle.png)](https://google.com)\n위의 두가지 문법은 이미지크기 조정 X\n&amp;lt;img src = &quot;/assets/img/triangle.png&quot; width=&quot;40%&quot;&amp;gt;\n&amp;lt;a href = &quot;https://google.com&quot;&amp;gt;&amp;lt;img src = &quot;/assets/img/triangle.png&quot; width=&quot;40%&quot;&amp;gt;&amp;lt;/a&amp;gt;\n\n\n   \n\n\n\n\n\n표\n값 | 의미 | 기본값\n---|:---:|---:\n1 | 일| 1\n2 | 이| 2\n3 | 삼| 3\n\n\n\n  \n    \n      값\n      의미\n      기본값\n    \n  \n  \n    \n      1\n      일\n      1\n    \n    \n      2\n      이\n      2\n    \n    \n      3\n      삼\n      3\n    \n  \n\n\n그 외\n&amp;gt;인용문\n&amp;gt;&amp;gt;인용문\n&amp;gt;&amp;gt;&amp;gt;인용문\n---구분선\n***구분선\n___구분선\n\n\n\n  인용문\n  \n    인용문\n    \n      인용문\n    \n  \n\n\n\n\n\n\n\n"
+} ,
+  
+  {
+    "title"    : "test Java",
+    "category" : "",
+    "tags"     : " ",
+    "url"      : "/java/2020/08/20/test-java.html",
+    "date"     : "August 20, 2020",
+    "excerpt"  : "test\n",
+  "content"  : "test\n"
+} ,
+  
+  {
+    "title"    : "test C",
+    "category" : "",
+    "tags"     : " ",
+    "url"      : "/c/2020/08/20/test-c.html",
+    "date"     : "August 20, 2020",
+    "excerpt"  : "test\n",
+  "content"  : "test\n"
 } 
   
   ,
