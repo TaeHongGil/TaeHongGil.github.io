@@ -4,6 +4,9 @@ title: >
     git블로그 category 만드는 법
 categories: [Git]
 tags: [git, blog, jekyll]
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 
 <span style="color:red">**모든 테마가 같은 파일이름/코드를 사용하지 않습니다.**</span>
