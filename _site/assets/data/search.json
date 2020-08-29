@@ -1,9 +1,39 @@
 [
   
   {
+    "title"    : "test Python",
+    "category" : "",
+    "tags"     : " ",
+    "url"      : "/python/2020/08/29/test-python.html",
+    "date"     : "August 29, 2020",
+    "excerpt"  : "\n",
+  "content"  : "\n"
+} ,
+  
+  {
+    "title"    : "test Java",
+    "category" : "",
+    "tags"     : " ",
+    "url"      : "/java/2020/08/29/test-java.html",
+    "date"     : "August 29, 2020",
+    "excerpt"  : "\n",
+  "content"  : "\n"
+} ,
+  
+  {
+    "title"    : "test C",
+    "category" : "",
+    "tags"     : " ",
+    "url"      : "/c/2020/08/29/test-c.html",
+    "date"     : "August 29, 2020",
+    "excerpt"  : "\n",
+  "content"  : "\n"
+} ,
+  
+  {
     "title"    : "git블로그 category 만드는 법",
     "category" : "",
-    "tags"     : " git, 블로그",
+    "tags"     : " git, blog, jekyll",
     "url"      : "/git/2020/08/29/gitblog-category.html",
     "date"     : "August 29, 2020",
     "excerpt"  : "모든 테마가 같은 파일이름/코드를 사용하지 않습니다.\n \n비슷한 코드를 찾으시면 쉽게 하실수 있습니다\n\n1.category폴더 만들기\n\n\n\ncategory 폴더를 만든 뒤 category목록을 작성해줍니다.\n\n\n\ncategory목록안의 내용입니다. layout은 후에 작성합니다.\n\n\n\n\n2.post에 categories추가\n\n\n\npost에 categories를 추가해줍니다.\n\n이 categories를 가져오는 변수는 site.categor...",
@@ -11,19 +41,9 @@
 } ,
   
   {
-    "title"    : "test python ",
-    "category" : "",
-    "tags"     : " git, 블로그, markdown",
-    "url"      : "/python/2020/08/28/test.html",
-    "date"     : "August 28, 2020",
-    "excerpt"  : "test\n",
-  "content"  : "test\n"
-} ,
-  
-  {
     "title"    : "git블로그 Markdown 문법 ",
     "category" : "",
-    "tags"     : " git, 블로그",
+    "tags"     : " git, blog, jekyll",
     "url"      : "/git/2020/08/28/gitblog-markdown.html",
     "date"     : "August 28, 2020",
     "excerpt"  : "제목 및 본문 작성\n\n#Test 제목 1\n##Test 제목 2\n###Test 제목 3\nTest 본문\n\n\nTest\nTest\nTest\nTest\n\n\n\n\n코드 블럭\n\n```언어 ex) python, js, java, c, ... 언어를 입력하지않으면 그대로\nprint(hello world)\n```  \n\n\nprint(&quot;hello world&quot;)\n\n\n\n\n\n링크\n유형1(`설명어`를 클릭하면 URL로 이동) : [구글](https://google.com ...",

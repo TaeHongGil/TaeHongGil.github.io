@@ -3,7 +3,7 @@ layout: post
 title: >
     git블로그 Markdown 문법 
 categories: [Git]
-tags: [git, 블로그]
+tags: [git, blog, jekyll]
 ---
 
 ## 제목 및 본문 작성
