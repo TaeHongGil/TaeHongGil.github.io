@@ -3,6 +3,51 @@
     
         
             <url>
+                <loc>http://localhost:4000/algorism/2020/08/30/union-find-algorism.html</loc>
+                
+                    <lastmod>2020-08-30T00:00:00+09:00</lastmod>
+                
+                
+                    <changefreq>monthly</changefreq>
+                
+                
+                    <priority>0.5</priority>
+                
+            </url>
+        
+    
+        
+            <url>
+                <loc>http://localhost:4000/algorism/2020/08/30/dfs-bfs-algorism.html</loc>
+                
+                    <lastmod>2020-08-30T00:00:00+09:00</lastmod>
+                
+                
+                    <changefreq>monthly</changefreq>
+                
+                
+                    <priority>0.5</priority>
+                
+            </url>
+        
+    
+        
+            <url>
+                <loc>http://localhost:4000/algorism/2020/08/30/Kruskal-algorism.html</loc>
+                
+                    <lastmod>2020-08-30T00:00:00+09:00</lastmod>
+                
+                
+                    <changefreq>monthly</changefreq>
+                
+                
+                    <priority>0.5</priority>
+                
+            </url>
+        
+    
+        
+            <url>
                 <loc>http://localhost:4000/python/2020/08/29/python-algorism.html</loc>
                 
                     <lastmod>2020-08-29T00:00:00+09:00</lastmod>
