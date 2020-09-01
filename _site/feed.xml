@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-09-01T19:44:08+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Hong</title><subtitle>A website with blog posts and pages</subtitle><entry><title type="html">strlen(), strcpy(), strcmp() 구현</title><link href="http://localhost:4000/c/2020/09/01/str-method.html" rel="alternate" type="text/html" title="strlen(), strcpy(), strcmp() 구현
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-09-01T19:47:13+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Hong</title><subtitle>A website with blog posts and pages</subtitle><entry><title type="html">strlen(), strcpy(), strcmp() 구현</title><link href="http://localhost:4000/c/2020/09/01/str-method.html" rel="alternate" type="text/html" title="strlen(), strcpy(), strcmp() 구현
 " /><published>2020-09-01T00:00:00+09:00</published><updated>2020-09-01T00:00:00+09:00</updated><id>http://localhost:4000/c/2020/09/01/str-method</id><content type="html" xml:base="http://localhost:4000/c/2020/09/01/str-method.html">&lt;p&gt;&lt;span style=&quot;color:red&quot;&gt;&lt;strong&gt;*str1 = str1의 주소값 = 포인터가 가리키는 주소에 저장된 값이라고 하겠습니다.&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;strlen&quot;&gt;strlen()&lt;/h1&gt;
@@ -148,7 +148,57 @@ str2 = a b c d e \0
 point          *
 
 return -1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="C" /><summary type="html">*str1 = str1의 주소값 = 포인터가 가리키는 주소에 저장된 값이라고 하겠습니다.</summary></entry><entry><title type="html">Kruskal Algorithm</title><link href="http://localhost:4000/algorism/2020/08/30/Kruskal-algorism.html" rel="alternate" type="text/html" title="Kruskal Algorithm
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="C" /><summary type="html">*str1 = str1의 주소값 = 포인터가 가리키는 주소에 저장된 값이라고 하겠습니다.</summary></entry><entry><title type="html">Union Find Algorism</title><link href="http://localhost:4000/algorism/2020/08/30/union-find-algorism.html" rel="alternate" type="text/html" title="Union Find Algorism
+" /><published>2020-08-30T00:00:00+09:00</published><updated>2020-08-30T00:00:00+09:00</updated><id>http://localhost:4000/algorism/2020/08/30/union-find-algorism</id><content type="html" xml:base="http://localhost:4000/algorism/2020/08/30/union-find-algorism.html">&lt;h1 id=&quot;union-find&quot;&gt;Union-Find&lt;/h1&gt;
+
+&lt;p&gt;대표적 그래프 알고리즘으로 ‘합집합 찾기’라는 의미를 가지고 있습니다.&lt;/p&gt;
+
+&lt;p&gt;상호 배타적 집합(Disjoint-set)이라고도 합니다.&lt;/p&gt;
+
+&lt;p&gt;여러 노드가 존재할 때, 두 개의 노드를 선택해서, 현재 두 노드가 서로 같은 그래프에 속하는지 판별하는 알고리즘입니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/union-find/1.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;위와 같이 노드가 연결되어 있다면 아래와 같이 표현됩니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/union-find/2.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;이와 같이 부모를 합칠 때는 일반적으로 더 작은 값 쪽으로 합칩니다. 이것을 합침(Union) 과정이라고 말할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/union-find/3.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;또 위와 같이 하나 이상의 노드가 연결되어 있을 때는&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/union-find/4.jpg&quot; alt=&quot;img&quot; /&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/img/union-find/5.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;한번에 부모노드를 알 수 없기 때문에 재귀함수를 거쳐 표현됩니다.&lt;/p&gt;
+
+&lt;p&gt;이 때 노드 1, 2, 3의 부모가 모두 1이기 때문에 이 세 가지 노드는 모두 같은 그래프에 속한다고 할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;Find 알고리즘은 두 개의 노드의 부모 노드를 확인하여 현재 같은 집합에 속하는지 확인하는 알고리즘입니다.&lt;/p&gt;</content><author><name></name></author><category term="Algorism" /><summary type="html">Union-Find</summary></entry><entry><title type="html">DFS / BFS algorism (DP)</title><link href="http://localhost:4000/algorism/2020/08/30/dfs-bfs-algorism.html" rel="alternate" type="text/html" title="DFS / BFS algorism (DP)
+" /><published>2020-08-30T00:00:00+09:00</published><updated>2020-08-30T00:00:00+09:00</updated><id>http://localhost:4000/algorism/2020/08/30/dfs-bfs-algorism</id><content type="html" xml:base="http://localhost:4000/algorism/2020/08/30/dfs-bfs-algorism.html">&lt;h1 id=&quot;depth-first-search-dfs&quot;&gt;Depth-First Search (DFS)&lt;/h1&gt;
+
+&lt;p&gt;DFS(깊이 우선 탐색)은 Root Node 혹은 다른 임의의 Node에서 다음 분기(Branch)로 넘어가기 전에 해당 분기를 완벽하게 탐색하는 방법입니다.&lt;/p&gt;
+
+&lt;p&gt;Stack 혹은 재귀함수(Recursion)으로 구현됩니다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;경로를 탐색할 때 한 방향으로 갈 수 있을 때까지 계속 가다가 더 이상 갈 수 없게되면 다른 방향으로 다시 탐색을 진행&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/dfs-bfs/1.gif&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;breadth-first-search-bfs&quot;&gt;Breadth First Search (BFS)&lt;/h2&gt;
+
+&lt;p&gt;BFS(너비 우선 탐색)은 Root Node 혹은 다른 임의의 노드에서 인접한 노드를 먼저 탐색하는 방법입니다.&lt;/p&gt;
+
+&lt;p&gt;Queue를 사용해서 구현합니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/dfs-bfs/2.gif&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="Algorism" /><summary type="html">Depth-First Search (DFS)</summary></entry><entry><title type="html">Kruskal Algorithm</title><link href="http://localhost:4000/algorism/2020/08/30/Kruskal-algorism.html" rel="alternate" type="text/html" title="Kruskal Algorithm
 " /><published>2020-08-30T00:00:00+09:00</published><updated>2020-08-30T00:00:00+09:00</updated><id>http://localhost:4000/algorism/2020/08/30/Kruskal-algorism</id><content type="html" xml:base="http://localhost:4000/algorism/2020/08/30/Kruskal-algorism.html">&lt;h1 id=&quot;kruskal-algorithm&quot;&gt;Kruskal Algorithm&lt;/h1&gt;
 
 &lt;p&gt;크루스칼 알고리즘은 가장 적은 비용으로 모든 노드를 연결하기 위해 사용하는 알고리즘입니다.&lt;/p&gt;
@@ -358,57 +408,79 @@ return -1
 
 &lt;p&gt;모든 노드가 연결되어 있기 때문에 종료합니다.&lt;/p&gt;
 
-&lt;p&gt;따라서 전체 노드를 연결하는 비용은 1 + 2 + 4 = 7 입니다.&lt;/p&gt;</content><author><name></name></author><category term="Algorism" /><summary type="html">Kruskal Algorithm</summary></entry><entry><title type="html">Union Find Algorism</title><link href="http://localhost:4000/algorism/2020/08/30/union-find-algorism.html" rel="alternate" type="text/html" title="Union Find Algorism
-" /><published>2020-08-30T00:00:00+09:00</published><updated>2020-08-30T00:00:00+09:00</updated><id>http://localhost:4000/algorism/2020/08/30/union-find-algorism</id><content type="html" xml:base="http://localhost:4000/algorism/2020/08/30/union-find-algorism.html">&lt;h1 id=&quot;union-find&quot;&gt;Union-Find&lt;/h1&gt;
+&lt;p&gt;따라서 전체 노드를 연결하는 비용은 1 + 2 + 4 = 7 입니다.&lt;/p&gt;</content><author><name></name></author><category term="Algorism" /><summary type="html">Kruskal Algorithm</summary></entry><entry><title type="html">Dynamic Programming algorism (DP)</title><link href="http://localhost:4000/algorism/2020/08/29/dp-algorism.html" rel="alternate" type="text/html" title="Dynamic Programming algorism (DP)
+" /><published>2020-08-29T00:00:00+09:00</published><updated>2020-08-29T00:00:00+09:00</updated><id>http://localhost:4000/algorism/2020/08/29/dp-algorism</id><content type="html" xml:base="http://localhost:4000/algorism/2020/08/29/dp-algorism.html">&lt;h1 id=&quot;dynamic-programming&quot;&gt;Dynamic Programming&lt;/h1&gt;
 
-&lt;p&gt;대표적 그래프 알고리즘으로 ‘합집합 찾기’라는 의미를 가지고 있습니다.&lt;/p&gt;
+&lt;p&gt;DP(동적 계획법)는 복잡한 문제를 간단한 여러 개의 문제로 나누어 푸는 방법을 말합니다.&lt;/p&gt;
 
-&lt;p&gt;상호 배타적 집합(Disjoint-set)이라고도 합니다.&lt;/p&gt;
+&lt;p&gt;DP의 원리는 일반적으로 주어진 문제를 풀기 위해서, 문제를 여러 개의 하위 문제로 나누어 푼 다음,&lt;br /&gt;
+그것을 결합하여 최종적인 목적에 도달하는 것입니다.&lt;/p&gt;
 
-&lt;p&gt;여러 노드가 존재할 때, 두 개의 노드를 선택해서, 현재 두 노드가 서로 같은 그래프에 속하는지 판별하는 알고리즘입니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/union-find/1.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;위와 같이 노드가 연결되어 있다면 아래와 같이 표현됩니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/union-find/2.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;이와 같이 부모를 합칠 때는 일반적으로 더 작은 값 쪽으로 합칩니다. 이것을 합침(Union) 과정이라고 말할 수 있습니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/union-find/3.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;또 위와 같이 하나 이상의 노드가 연결되어 있을 때는&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/union-find/4.jpg&quot; alt=&quot;img&quot; /&gt;&lt;br /&gt;
-&lt;img src=&quot;/assets/img/union-find/5.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;한번에 부모노드를 알 수 없기 때문에 재귀함수를 거쳐 표현됩니다.&lt;/p&gt;
-
-&lt;p&gt;이 때 노드 1, 2, 3의 부모가 모두 1이기 때문에 이 세 가지 노드는 모두 같은 그래프에 속한다고 할 수 있습니다.&lt;/p&gt;
-
-&lt;p&gt;Find 알고리즘은 두 개의 노드의 부모 노드를 확인하여 현재 같은 집합에 속하는지 확인하는 알고리즘입니다.&lt;/p&gt;</content><author><name></name></author><category term="Algorism" /><summary type="html">Union-Find</summary></entry><entry><title type="html">DFS / BFS algorism (DP)</title><link href="http://localhost:4000/algorism/2020/08/30/dfs-bfs-algorism.html" rel="alternate" type="text/html" title="DFS / BFS algorism (DP)
-" /><published>2020-08-30T00:00:00+09:00</published><updated>2020-08-30T00:00:00+09:00</updated><id>http://localhost:4000/algorism/2020/08/30/dfs-bfs-algorism</id><content type="html" xml:base="http://localhost:4000/algorism/2020/08/30/dfs-bfs-algorism.html">&lt;h1 id=&quot;depth-first-search-dfs&quot;&gt;Depth-First Search (DFS)&lt;/h1&gt;
-
-&lt;p&gt;DFS(깊이 우선 탐색)은 Root Node 혹은 다른 임의의 Node에서 다음 분기(Branch)로 넘어가기 전에 해당 분기를 완벽하게 탐색하는 방법입니다.&lt;/p&gt;
-
-&lt;p&gt;Stack 혹은 재귀함수(Recursion)으로 구현됩니다.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;경로를 탐색할 때 한 방향으로 갈 수 있을 때까지 계속 가다가 더 이상 갈 수 없게되면 다른 방향으로 다시 탐색을 진행&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/dfs-bfs/1.gif&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;대표적인 예로 피보나치 수열이 있습니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;
 &lt;br /&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;breadth-first-search-bfs&quot;&gt;Breadth First Search (BFS)&lt;/h2&gt;
+&lt;h2 id=&quot;피보나치-수열&quot;&gt;피보나치 수열&lt;/h2&gt;
 
-&lt;p&gt;BFS(너비 우선 탐색)은 Root Node 혹은 다른 임의의 노드에서 인접한 노드를 먼저 탐색하는 방법입니다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/dp/1.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Queue를 사용해서 구현합니다.&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fibo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fibo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fibo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/dfs-bfs/2.gif&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="Algorism" /><summary type="html">Depth-First Search (DFS)</summary></entry><entry><title type="html">Algorism 풀이 시 유용한 Python 함수</title><link href="http://localhost:4000/python/2020/08/29/python-algorism.html" rel="alternate" type="text/html" title="Algorism 풀이 시 유용한 Python 함수
+&lt;p&gt;위의 함수에서 x=5 일때&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;fibo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;fibo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;fibo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fibo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;fibo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fibo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fibo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;  
+&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fibo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fibo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fibo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fibo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fibo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;위와 같이 재귀함수가 실행됩니다.&lt;/p&gt;
+
+&lt;p&gt;매번 계산했던 값을 다시 계산하게 되는데&lt;/p&gt;
+
+&lt;p&gt;이 때 효율을 높이기 위한 방법으로&lt;/p&gt;
+
+&lt;p&gt;DP의 핵심 기술인 &lt;strong&gt;memoization(메모이제이션)&lt;/strong&gt;이 있습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;memoization메모이제이션&quot;&gt;memoization(메모이제이션)&lt;/h2&gt;
+
+&lt;p&gt;다음은 fibo함수의 효율을 높인 코드입니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fibo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fibo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fibo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;x = 5 일 때 위의 코드는 아래와 같이 실행됩니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;f[1] = fibo(1)
+f[2] = fibo(2)
+f[3] = f[1] + f[2] = fibo(3)
+f[4] = f[2] + f[3] = fibo(4)
+f[5] = f[3] + f[4] = fibo(5)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;이렇게 주어진 입력값에 대한 결과를 저장함으로써 같은 입력값에 대해 함수가 한 번만 실행되게 하는 것을&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;memoization&lt;/strong&gt;이라고 합니다.&lt;/p&gt;</content><author><name></name></author><category term="Algorism" /><summary type="html">Dynamic Programming</summary></entry><entry><title type="html">Algorism 풀이 시 유용한 Python 함수</title><link href="http://localhost:4000/python/2020/08/29/python-algorism.html" rel="alternate" type="text/html" title="Algorism 풀이 시 유용한 Python 함수
 " /><published>2020-08-29T00:00:00+09:00</published><updated>2020-08-29T00:00:00+09:00</updated><id>http://localhost:4000/python/2020/08/29/python-algorism</id><content type="html" xml:base="http://localhost:4000/python/2020/08/29/python-algorism.html">&lt;h2 id=&quot;순열-조합&quot;&gt;순열 조합&lt;/h2&gt;
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;itertools&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;permutations&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;combinations&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -666,79 +738,7 @@ ex)Git클릭시 caregory/Git&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/gitblog-category/7.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;완성!&lt;/p&gt;</content><author><name></name></author><category term="git" /><category term="blog" /><category term="jekyll" /><summary type="html">모든 테마가 같은 파일이름/코드를 사용하지 않습니다. 비슷한 코드를 찾으시면 쉽게 하실수 있습니다</summary></entry><entry><title type="html">Dynamic Programming algorism (DP)</title><link href="http://localhost:4000/algorism/2020/08/29/dp-algorism.html" rel="alternate" type="text/html" title="Dynamic Programming algorism (DP)
-" /><published>2020-08-29T00:00:00+09:00</published><updated>2020-08-29T00:00:00+09:00</updated><id>http://localhost:4000/algorism/2020/08/29/dp-algorism</id><content type="html" xml:base="http://localhost:4000/algorism/2020/08/29/dp-algorism.html">&lt;h1 id=&quot;dynamic-programming&quot;&gt;Dynamic Programming&lt;/h1&gt;
-
-&lt;p&gt;DP(동적 계획법)는 복잡한 문제를 간단한 여러 개의 문제로 나누어 푸는 방법을 말합니다.&lt;/p&gt;
-
-&lt;p&gt;DP의 원리는 일반적으로 주어진 문제를 풀기 위해서, 문제를 여러 개의 하위 문제로 나누어 푼 다음,&lt;br /&gt;
-그것을 결합하여 최종적인 목적에 도달하는 것입니다.&lt;/p&gt;
-
-&lt;p&gt;대표적인 예로 피보나치 수열이 있습니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;피보나치-수열&quot;&gt;피보나치 수열&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/dp/1.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fibo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fibo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fibo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;위의 함수에서 x=5 일때&lt;/p&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;fibo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;fibo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;fibo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fibo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;fibo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fibo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fibo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;  
-&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fibo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fibo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fibo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fibo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fibo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;  
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;위와 같이 재귀함수가 실행됩니다.&lt;/p&gt;
-
-&lt;p&gt;매번 계산했던 값을 다시 계산하게 되는데&lt;/p&gt;
-
-&lt;p&gt;이 때 효율을 높이기 위한 방법으로&lt;/p&gt;
-
-&lt;p&gt;DP의 핵심 기술인 &lt;strong&gt;memoization(메모이제이션)&lt;/strong&gt;이 있습니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;memoization메모이제이션&quot;&gt;memoization(메모이제이션)&lt;/h2&gt;
-
-&lt;p&gt;다음은 fibo함수의 효율을 높인 코드입니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;
-
-&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fibo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fibo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fibo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;x = 5 일 때 위의 코드는 아래와 같이 실행됩니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;f[1] = fibo(1)
-f[2] = fibo(2)
-f[3] = f[1] + f[2] = fibo(3)
-f[4] = f[2] + f[3] = fibo(4)
-f[5] = f[3] + f[4] = fibo(5)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;이렇게 주어진 입력값에 대한 결과를 저장함으로써 같은 입력값에 대해 함수가 한 번만 실행되게 하는 것을&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;memoization&lt;/strong&gt;이라고 합니다.&lt;/p&gt;</content><author><name></name></author><category term="Algorism" /><summary type="html">Dynamic Programming</summary></entry><entry><title type="html">git블로그 Markdown 문법</title><link href="http://localhost:4000/git/2020/08/28/gitblog-markdown.html" rel="alternate" type="text/html" title="git블로그 Markdown 문법 
+&lt;p&gt;완성!&lt;/p&gt;</content><author><name></name></author><category term="git" /><category term="blog" /><category term="jekyll" /><summary type="html">모든 테마가 같은 파일이름/코드를 사용하지 않습니다. 비슷한 코드를 찾으시면 쉽게 하실수 있습니다</summary></entry><entry><title type="html">git블로그 Markdown 문법</title><link href="http://localhost:4000/git/2020/08/28/gitblog-markdown.html" rel="alternate" type="text/html" title="git블로그 Markdown 문법 
 " /><published>2020-08-28T00:00:00+09:00</published><updated>2020-08-28T00:00:00+09:00</updated><id>http://localhost:4000/git/2020/08/28/gitblog-markdown</id><content type="html" xml:base="http://localhost:4000/git/2020/08/28/gitblog-markdown.html">&lt;h2 id=&quot;제목-및-본문-작성&quot;&gt;제목 및 본문 작성&lt;/h2&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#Test 제목 1
@@ -931,5 +931,4 @@ ___구분선
 
 &lt;hr /&gt;
 
-&lt;hr /&gt;</content><author><name></name></author><category term="git" /><category term="blog" /><category term="jekyll" /><summary type="html">제목 및 본문 작성</summary></entry><entry><title type="html">test Java</title><link href="http://localhost:4000/java/2020/08/20/test-java.html" rel="alternate" type="text/html" title="test Java
-" /><published>2020-08-20T00:00:00+09:00</published><updated>2020-08-20T00:00:00+09:00</updated><id>http://localhost:4000/java/2020/08/20/test-java</id><content type="html" xml:base="http://localhost:4000/java/2020/08/20/test-java.html">&lt;p&gt;test&lt;/p&gt;</content><author><name></name></author><summary type="html">test</summary></entry></feed>
+&lt;hr /&gt;</content><author><name></name></author><category term="git" /><category term="blog" /><category term="jekyll" /><summary type="html">제목 및 본문 작성</summary></entry></feed>

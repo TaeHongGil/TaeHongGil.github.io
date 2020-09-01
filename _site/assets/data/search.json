@@ -78,16 +78,6 @@
     "date"     : "August 28, 2020",
     "excerpt"  : "제목 및 본문 작성\n\n#Test 제목 1\n##Test 제목 2\n###Test 제목 3\nTest 본문\n\n\nTest\nTest\nTest\nTest\n\n\n\n\n코드 블럭\n\n```언어 ex) python, js, java, c, ... 언어를 입력하지않으면 그대로\nprint(hello world)\n```  \n\n\nprint(&quot;hello world&quot;)\n\n\n\n\n\n링크\n유형1(`설명어`를 클릭하면 URL로 이동) : [구글](https://google.com ...",
   "content"  : "제목 및 본문 작성\n\n#Test 제목 1\n##Test 제목 2\n###Test 제목 3\nTest 본문\n\n\nTest\nTest\nTest\nTest\n\n\n\n\n코드 블럭\n\n```언어 ex) python, js, java, c, ... 언어를 입력하지않으면 그대로\nprint(hello world)\n```  \n\n\nprint(&quot;hello world&quot;)\n\n\n\n\n\n링크\n유형1(`설명어`를 클릭하면 URL로 이동) : [구글](https://google.com &quot;마우스를 올려놓으면 말풍선이 나옵니다.&quot;)  \n유형2(URL 보여주고 `자동연결`) : &amp;lt;https://google.com&amp;gt;  \n유형3(동일 파일 내 `문단 이동`) : [문단 이동](##제목-및-본문-작성)\n\n문단 매칭방법 : 제목(header)를 복사 붙여넣기 후,\n1) 특수문자제거\n2) 스페이스를 갯수만큼 -로 변경\n3) 대문자-&amp;gt;소문자로 변경\n4) 영문만 가능\n예) “#Test! 테스트” -&amp;gt; “#test–테스트”  \n\n\n구글\nhttps://google.com\n문단 이동\n\n\n\n\n단어 강조\n**두껍게** / __두껍게__\n*이텔릭체* / _이텔릭체_\n~~취소선~~\n&amp;lt;u&amp;gt;밑줄&amp;lt;/u&amp;gt;\n\n\n두껍게 / 두껍게\n이텔릭체 / 이텔릭체\n취소선\n밑줄\n\n\n\n\n개행\n문장 끝에 &quot;  &quot; (스페이스 두번)\n&amp;lt;br/&amp;gt;  (여러줄개행)\n\n\n\n\n\n리스트\n1. 순서\n2. 순서\n    - 순서(서브) \n    - 순서(서브) \n4. 순서\n    1. 순서(서브)\n    2. 순서(서브)\n3. 순서\n\n입력한 숫자와 관계없이 순서대로 \n\n- 순서에 사용 가능한 기호\n    - 대쉬(hyphen)\n    * 별표(asterisks)\n    + 더하기(plus sign)\n\n\n\n  순서\n  순서\n    \n      순서(서브)\n      순서(서브)\n    \n  \n  순서\n    \n      순서(서브)\n      순서(서브)\n    \n  \n  순서\n\n\n\n  서브에 사용 가능한 기호\n    \n      대쉬(hyphen)\n      별표(asterisks)\n      더하기(plus sign)\n    \n  \n\n\n\n\n\n이미지 / 이미지 링크\n![img](/assets/img/triangle.png)\n[![img](/assets/img/triangle.png)](https://google.com)\n위의 두가지 문법은 이미지크기 조정 X\n&amp;lt;img src = &quot;/assets/img/triangle.png&quot; width=&quot;40%&quot;&amp;gt;\n&amp;lt;a href = &quot;https://google.com&quot;&amp;gt;&amp;lt;img src = &quot;/assets/img/triangle.png&quot; width=&quot;40%&quot;&amp;gt;&amp;lt;/a&amp;gt;\n\n\n   \n\n\n\n\n\n표\n값 | 의미 | 기본값\n---|:---:|---:\n1 | 일| 1\n2 | 이| 2\n3 | 삼| 3\n\n\n\n  \n    \n      값\n      의미\n      기본값\n    \n  \n  \n    \n      1\n      일\n      1\n    \n    \n      2\n      이\n      2\n    \n    \n      3\n      삼\n      3\n    \n  \n\n\n그 외\n&amp;gt;인용문\n&amp;gt;&amp;gt;인용문\n&amp;gt;&amp;gt;&amp;gt;인용문\n---구분선\n***구분선\n___구분선\n\n\n\n  인용문\n  \n    인용문\n    \n      인용문\n    \n  \n\n\n\n\n\n\n\n"
-} ,
-  
-  {
-    "title"    : "test Java",
-    "category" : "",
-    "tags"     : " ",
-    "url"      : "/java/2020/08/20/test-java.html",
-    "date"     : "August 20, 2020",
-    "excerpt"  : "test\n",
-  "content"  : "test\n"
 } 
   
   
