@@ -1,5 +1,144 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-09-03T16:15:46+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Hong</title><subtitle>A website with blog posts and pages</subtitle><entry><title type="html">strlen(), strcpy(), strcmp() 구현</title><link href="http://localhost:4000/c/2020/09/01/str-method.html" rel="alternate" type="text/html" title="strlen(), strcpy(), strcmp() 구현
-" /><published>2020-09-01T00:00:00+09:00</published><updated>2020-09-01T00:00:00+09:00</updated><id>http://localhost:4000/c/2020/09/01/str-method</id><content type="html" xml:base="http://localhost:4000/c/2020/09/01/str-method.html">&lt;p&gt;&lt;span style=&quot;color:red&quot;&gt;&lt;strong&gt;*str1 = str1의 주소값 = 포인터가 가리키는 주소에 저장된 값이라고 하겠습니다.&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-09-03T18:59:51+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Hong</title><subtitle>A website with blog posts and pages</subtitle><entry><title type="html">strcat(), atoi() 구현</title><link href="http://localhost:4000/c/2020/09/03/str-method2.html" rel="alternate" type="text/html" title="strcat(), atoi() 구현
+" /><published>2020-09-03T00:00:00+09:00</published><updated>2020-09-03T00:00:00+09:00</updated><id>http://localhost:4000/c/2020/09/03/str-method2</id><content type="html" xml:base="http://localhost:4000/c/2020/09/03/str-method2.html">&lt;p&gt;&lt;span style=&quot;color:red&quot;&gt;&lt;strong&gt;*str1 = str1의 주소값 = 포인터가 가리키는 주소에 저장된 값이라고 하겠습니다.&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;strcat&quot;&gt;strcat()&lt;/h1&gt;
+
+&lt;h3 id=&quot;함수-원형&quot;&gt;함수 원형&lt;/h3&gt;
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;strcat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;origin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;origin에 있는 문자열을 dest 뒤쪽에 이어 붙이는 함수 입니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;구현&quot;&gt;구현&lt;/h3&gt;
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;strcat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;origin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;temp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+	&lt;span class=&quot;n&quot;&gt;temp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+	&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;dest&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+	&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;origin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dest&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;origin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;dest&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;origin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dest&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;'\0'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;temp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;origin과 dest의 주소를 받아 temp에 dest의 주소를 넣고&lt;/p&gt;
+
+&lt;p&gt;dest의 포인터를 주소값이 null이 나올 때까지 넘깁니다.&lt;/p&gt;
+
+&lt;p&gt;dest의 주소값에 origin의 주소값을 origin의 주소값이 null을 가르킬 때까지 넣습니다.&lt;/p&gt;
+
+&lt;p&gt;문자열의 마지막에는 null값이 들어갑니다.&lt;/p&gt;
+
+&lt;p&gt;temp의 주소를 리턴합니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;dest   = a b c \0
+origin = d e f \0
+
+dest   = a b c \0
+point    *
+temp   = a b c \0
+point    *
+...첫번째 while
+dest   = a b c \0
+point          *
+temp   = a b c \0
+point    *
+
+dest   = a b c \0
+point          *
+origin = d e f \0
+point    *
+temp   = a b c \0
+point    *
+...두번째 while
+dest   = a b c d e f \0
+point                *
+origin = d e f \0
+point          *
+temp   = a b c d e f \0
+point    *
+
+return temp
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;atoi&quot;&gt;atoi()&lt;/h1&gt;
+
+&lt;h3 id=&quot;함수-원형-1&quot;&gt;함수 원형&lt;/h3&gt;
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;atoi&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;str 문자열을 int형 정수로 바꾸는 함수 입니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;구현-1&quot;&gt;구현&lt;/h3&gt;
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;	&lt;span class=&quot;nf&quot;&gt;ft_atoi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;check&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+	&lt;span class=&quot;n&quot;&gt;check&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;'-'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;'+'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;'-'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;check&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+	&lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;'0'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;'9'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;'0'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+	
+	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;check&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;문자열 str의 주소를 받아 첫문자가 부호인지 판별합니다.&lt;/p&gt;
+
+&lt;p&gt;만약 부호라면 - / + 를 판별하여 check값을 변경합니다.&lt;/p&gt;
+
+&lt;p&gt;그 다음 str의 주소값이 숫자라면 int형 정수 num에 문자에서 ‘0’(48)을 뺀값을 더합니다.&lt;/p&gt;
+
+&lt;p&gt;그 다음 str의 주소값이 숫자라면 num에 10을 곱해 자리수를 늘리고 ‘0’(48)을 뺀값을 더합니다.&lt;/p&gt;
+
+&lt;p&gt;str의 주소값이 숫자가 아닐 때까지 반복합니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;str = - 1 2 3 a \0
+
+부호판별
+str = - 1 2 3 a \0
+point *
+check = 1
+...
+str = - 1 2 3 a \0
+point   *
+check = -1
+
+str = - 1 2 3 a \0
+point   *
+num = 0
+...while
+str = - 1 2 3 a \0
+point         *
+num = 123
+
+return num * check
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="C" /><summary type="html">*str1 = str1의 주소값 = 포인터가 가리키는 주소에 저장된 값이라고 하겠습니다.</summary></entry><entry><title type="html">strlen(), strcpy(), strcmp() 구현</title><link href="http://localhost:4000/c/2020/09/01/str-method1.html" rel="alternate" type="text/html" title="strlen(), strcpy(), strcmp() 구현
+" /><published>2020-09-01T00:00:00+09:00</published><updated>2020-09-01T00:00:00+09:00</updated><id>http://localhost:4000/c/2020/09/01/str-method1</id><content type="html" xml:base="http://localhost:4000/c/2020/09/01/str-method1.html">&lt;p&gt;&lt;span style=&quot;color:red&quot;&gt;&lt;strong&gt;*str1 = str1의 주소값 = 포인터가 가리키는 주소에 저장된 값이라고 하겠습니다.&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;strlen&quot;&gt;strlen()&lt;/h1&gt;
 
