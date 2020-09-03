@@ -13,13 +13,25 @@
   /* --- Responsive --- */
   @media screen and (min-width: $break) {
     background-size: 120% auto;
+    li
+    {
+      font-size: 50px;
+    }
   }
 
   @media screen and (max-width: $break) {
+    li
+    {
+      font-size: 30px;
+    }
     background-size: 200% auto;
   }
 
   @media screen and (max-width: $sm-break) {
+    li
+    {
+      font-size: 5px;
+    }
     background-size: 400% auto;
   }
 
