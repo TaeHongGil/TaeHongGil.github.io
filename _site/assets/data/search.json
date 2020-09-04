@@ -98,9 +98,9 @@
   "category" : "",
   "tags"     : " portfolio",
   "url"      : "/portfolio/class-macro",
-  "date"     : "September 3, 2020",
+  "date"     : "September 4, 2020",
   "excerpt"  : "\n\n설명\nPython의 tkinter패키지와 selenium패키지를 이용한 간단한 수강신청 매크로입니다.\n\n실행순서는 다음과 같습니다.\n\n\n  \n    id와 password를 입력받고 수강과목의 과목번호/반번호를 입력받습니다.\n  \n  \n    실행버튼을 누르면 수강신청사이트로 이동후 입력받은 id와 password로 로그인됩니다.\n  \n  \n    수강신청탭으로 이동 후 입력받은 과목번호와 반번호를 이용하여 수강신청합니다.\n  \n\n\n\n...",
-  "content"  : "\n\n설명\nPython의 tkinter패키지와 selenium패키지를 이용한 간단한 수강신청 매크로입니다.\n\n실행순서는 다음과 같습니다.\n\n\n  \n    id와 password를 입력받고 수강과목의 과목번호/반번호를 입력받습니다.\n  \n  \n    실행버튼을 누르면 수강신청사이트로 이동후 입력받은 id와 password로 로그인됩니다.\n  \n  \n    수강신청탭으로 이동 후 입력받은 과목번호와 반번호를 이용하여 수강신청합니다.\n  \n\n\n\n\n\n실행영상\n\n\n\n\n\n구현하기 어려웠던 점\n\n처음 element를 불러올 때 frame에 관계없이 불러왔었는데 element를 찾지 못했습니다.\n\n알아보니 switch_to_frame()함수를 통해 frame을 스위치해야만 정상적으로 element를 불러올 수 있었습니다.\n"
+  "content"  : "\n\n설명\nPython의 tkinter패키지와 selenium패키지를 이용한 간단한 수강신청 매크로입니다.\n\n실행순서는 다음과 같습니다.\n\n\n  \n    id와 password를 입력받고 수강과목의 과목번호/반번호를 입력받습니다.\n  \n  \n    실행버튼을 누르면 수강신청사이트로 이동후 입력받은 id와 password로 로그인됩니다.\n  \n  \n    수강신청탭으로 이동 후 입력받은 과목번호와 반번호를 이용하여 수강신청합니다.\n  \n\n\n\n\n\n실행영상\n\n\n이미 수강신청된 강의로 실행하였습니다.\n\n\n\n\n구현하기 어려웠던 점\n\n처음 element를 불러올 때 frame에 관계없이 불러왔었는데 element를 찾지 못했습니다.\n\n알아보니 switch_to_frame()함수를 통해 frame을 스위치해야만 정상적으로 element를 불러올 수 있었습니다.\n"
   
 } 
   
