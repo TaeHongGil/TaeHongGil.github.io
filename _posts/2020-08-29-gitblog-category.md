@@ -1,45 +1,47 @@
 ---
 layout: post
 title: >
-    gitë¸”ë¡œê·¸ category ë§Œë“œëŠ” ë²•
+    gitë¸”ë¡œê·? category ë§Œë“œ?Š” ë²?
 categories: [Git]
 tags: [git, blog, jekyll]
 ---
 
-<span style="color:red">**ëª¨ë“  í…Œë§ˆê°€ ê°™ì€ íŒŒì¼ì´ë¦„/ì½”ë“œë¥¼ ì‚¬ìš©í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.**</span>
+<span style="color:red">**ëª¨ë“  ?…Œë§ˆê?? ê°™ì?? ?ŒŒ?¼?´ë¦?/ì½”ë“œë¥? ?‚¬?š©?•˜ì§? ?•Š?Šµ?‹ˆ?‹¤.**</span>
 <br/> 
-<span style="color:red">**ë¹„ìŠ·í•œ ì½”ë“œë¥¼ ì°¾ìœ¼ì‹œë©´ ì‰½ê²Œ í•˜ì‹¤ìˆ˜ ìžˆìŠµë‹ˆë‹¤**</span> 
+<span style="color:red">**ë¹„ìŠ·?•œ ì½”ë“œë¥? ì°¾ìœ¼?‹œë©? ?‰½ê²? ?•˜?‹¤?ˆ˜ ?žˆ?Šµ?‹ˆ?‹¤**</span> 
 
 
-## 1.categoryí´ë” ë§Œë“¤ê¸°  
+## 1.category?´?” ë§Œë“¤ê¸?  
 
 ![img](/assets/img/gitblog-category/1.png)  
 
-category í´ë”ë¥¼ ë§Œë“  ë’¤ categoryëª©ë¡ì„ ìž‘ì„±í•´ì¤ë‹ˆë‹¤.  
+category ?´?”ë¥? ë§Œë“  ?’¤ categoryëª©ë¡?„ ?ž‘?„±?•´ì¤ë‹ˆ?‹¤.  
 
 ![img](/assets/img/gitblog-category/2.png)  
 
-categoryëª©ë¡ì•ˆì˜ ë‚´ìš©ìž…ë‹ˆë‹¤. layoutì€ í›„ì— ìž‘ì„±í•©ë‹ˆë‹¤.
+categoryëª©ë¡?•ˆ?˜ ?‚´?š©?ž…?‹ˆ?‹¤. layout??? ?›„?— ?ž‘?„±?•©?‹ˆ?‹¤.
+¤±¤¤¤·¤©
+
 
 <br/>
 <br/>
 
-## 2.postì— categoriesì¶”ê°€
+## 2.post?— categoriesì¶”ê??
 
 ![img](/assets/img/gitblog-category/3.png)  
 
-postì— categoriesë¥¼ ì¶”ê°€í•´ì¤ë‹ˆë‹¤.  
+post?— categoriesë¥? ì¶”ê???•´ì¤ë‹ˆ?‹¤.  
 
-ì´ categoriesë¥¼ ê°€ì ¸ì˜¤ëŠ” ë³€ìˆ˜ëŠ” site.categories ìž…ë‹ˆë‹¤.  
+?´ categoriesë¥? ê°?? ¸?˜¤?Š” ë³??ˆ˜?Š” site.categories ?ž…?‹ˆ?‹¤.  
 
 <br/>
 <br/>
 
-## 3.home.html(index) ìˆ˜ì •í•˜ê¸°  
+## 3.home.html(index) ?ˆ˜? •?•˜ê¸?  
 
 ![img](/assets/img/gitblog-category/4.png)  
 
-ì›í•˜ëŠ” ë¶€ë¶„ì— (ì €ëŠ” ìƒë‹¨)  
+?›?•˜?Š” ë¶?ë¶„ì— (????Š” ?ƒ?‹¨)  
 
 ```html
 <ul>
@@ -49,46 +51,46 @@ postì— categoriesë¥¼ ì¶”ê°€í•´ì¤ë‹ˆë‹¤.
 </ul>
 ```
 
-ì½”ë“œë¥¼ ì¶”ê°€í•´ì¤ë‹ˆë‹¤.
-<span style="color:red">**(ì¤‘ê´„í˜¸ ì•ž ë’¤ ë„ì›Œì“°ê¸° ì œì™¸)**</span>  
+ì½”ë“œë¥? ì¶”ê???•´ì¤ë‹ˆ?‹¤.
+<span style="color:red">**(ì¤‘ê´„?˜¸ ?•ž ?’¤ ?„?›Œ?“°ê¸? ? œ?™¸)**</span>  
 
 ```html
 <li>{ {category | first } }</li>
 ```
 
-ì´ ë¶€ë¶„ì—ì„œ site.categoriesë¥¼ categoryë³€ìˆ˜ì— í•˜ë‚˜ì”©ë„£ì–´ ë¦¬ìŠ¤íŠ¸ë¥¼ ì¶œë ¥í•©ë‹ˆë‹¤.  
+?´ ë¶?ë¶„ì—?„œ site.categoriesë¥? categoryë³??ˆ˜?— ?•˜?‚˜?”©?„£?–´ ë¦¬ìŠ¤?Š¸ë¥? ì¶œë ¥?•©?‹ˆ?‹¤.  
 
-categoryì—ëŠ” ì—¬ëŸ¬ ê°’ì´ ë“¤ì–´ê°€ê¸°ë•Œë¬¸ì— first ë¥¼ ì‚¬ìš©í•˜ì—¬ categoryëª…ë§Œ ì‚¬ìš©í•©ë‹ˆë‹¤.  
+category?—?Š” ?—¬?Ÿ¬ ê°’ì´ ?“¤?–´ê°?ê¸°ë•Œë¬¸ì— first ë¥? ?‚¬?š©?•˜?—¬ categoryëª…ë§Œ ?‚¬?š©?•©?‹ˆ?‹¤.  
 
-í•˜ì´í¼ë§í¬ëŠ” categoryí´ë” ì•ˆì—ìžˆëŠ” ì„ íƒ(í´ë¦­)í•œ categoryë¥¼ ë¶ˆëŸ¬ì˜µë‹ˆë‹¤.  
-ex)Gití´ë¦­ì‹œ caregory/Git  
+?•˜?´?¼ë§í¬?Š” category?´?” ?•ˆ?—?žˆ?Š” ?„ ?ƒ(?´ë¦?)?•œ categoryë¥? ë¶ˆëŸ¬?˜µ?‹ˆ?‹¤.  
+ex)Git?´ë¦??‹œ caregory/Git  
 
 <br/>
 <br/>
 
-## 4.category layout ë§Œë“¤ê¸°
+## 4.category layout ë§Œë“¤ê¸?
 
-layoutí´ë”ì— category.html íŒŒì¼ì„ ë§Œë“¤ì–´ ì¤€ë’¤ home.htmlíŒŒì¼ì˜ ë‚´ìš©ì„ ë³µì‚¬í•©ë‹ˆë‹¤.  
+layout?´?”?— category.html ?ŒŒ?¼?„ ë§Œë“¤?–´ ì¤??’¤ home.html?ŒŒ?¼?˜ ?‚´?š©?„ ë³µì‚¬?•©?‹ˆ?‹¤.  
 
 ![img](/assets/img/gitblog-category/5.png)  
 
-ë³´ì‹œë©´ ì´ëŸ°ì‹ìœ¼ë¡œ postëª©ë¡ì„ ë¶ˆëŸ¬ì˜¤ëŠ” ì½”ë“œê°€ ìžˆìŠµë‹ˆë‹¤.
-<span style="color:red">**(ë‹¤ë¥¸ íŒŒì¼ì— ìžˆì„ ìˆ˜ë„ ìžˆìŠµë‹ˆë‹¤.)**</span>  
+ë³´ì‹œë©? ?´?Ÿ°?‹?œ¼ë¡? postëª©ë¡?„ ë¶ˆëŸ¬?˜¤?Š” ì½”ë“œê°? ?žˆ?Šµ?‹ˆ?‹¤.
+<span style="color:red">**(?‹¤ë¥? ?ŒŒ?¼?— ?žˆ?„ ?ˆ˜?„ ?žˆ?Šµ?‹ˆ?‹¤.)**</span>  
 
 ![img](/assets/img/gitblog-category/6.png)  
 
-ì´ë ‡ê²Œ ìˆ˜ì •í•´ì¤ë‹ˆë‹¤.  
+?´? ‡ê²? ?ˆ˜? •?•´ì¤ë‹ˆ?‹¤.  
 
 { % for post in site.categories[page.category] % }  
 
-postë§ˆë‹¤ ìžˆëŠ” categoriesë¥¼ ë¹„êµí•˜ì—¬ í˜„ìž¬ ì„ íƒ(í´ë¦­í•œ) ì¹´í…Œê³ ë¦¬ë¥¼ í¬í•¨í•œ post ëª©ë¡ì„ post(ë³€ìˆ˜)ì— ì €ìž¥í•©ë‹ˆë‹¤.  
+postë§ˆë‹¤ ?žˆ?Š” categoriesë¥? ë¹„êµ?•˜?—¬ ?˜„?ž¬ ?„ ?ƒ(?´ë¦??•œ) ì¹´í…Œê³ ë¦¬ë¥? ?¬?•¨?•œ post ëª©ë¡?„ post(ë³??ˆ˜)?— ????ž¥?•©?‹ˆ?‹¤.  
 
 <br/>
 <br/>
 
-## 5.css ìˆ˜ì •
-ë§ˆì§€ë§‰ìœ¼ë¡œ cssë¥¼ ìˆ˜ì •í•˜ë©´
+## 5.css ?ˆ˜? •
+ë§ˆì??ë§‰ìœ¼ë¡? cssë¥? ?ˆ˜? •?•˜ë©?
 
 ![img](/assets/img/gitblog-category/7.png)  
 
-ì™„ì„±!
+?™„?„±!
