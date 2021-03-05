@@ -2,7 +2,7 @@
 layout: post
 title: printf
 img: "assets/img/portfolio/printf.PNG"
-date: 02, 15 2021
+date: 01, 15 2021
 tags: [portfolio]
 ---
 
@@ -44,7 +44,7 @@ printf를 구현했습니다.
 <br/>
 
 ## 실행영상 
-<iframe width="640" height="360" src="https://youtu.be/SsAQwVXiXfk" frameborder="0" gesture="media" allowfullscreen=""></iframe>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/SsAQwVXiXfk" frameborder="0" gesture="media" allowfullscreen=""></iframe>
 
 
 <br/>
