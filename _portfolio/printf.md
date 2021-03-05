@@ -1,6 +1,6 @@
 ---
 layout: post
-title: class macro
+title: printf
 img: "assets/img/portfolio/printf.png"
 date: 09, 03 2020
 tags: [portfolio]
@@ -37,6 +37,7 @@ printf를 구현했습니다.
     u 부호 없는 10진수
     x 부호 없는 16 진수 정수 " abcdef "를 사용 합니다.
     X 부호 없는 16 진수 정수 " ABCDEF "를 사용 합니다.
+    % %기호
 
 <br/>
 <br/>
