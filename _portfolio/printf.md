@@ -46,6 +46,7 @@ printf를 구현했습니다.
 ## 실행영상 
 <iframe width="640" height="360" src="https://www.youtube.com/embed/SsAQwVXiXfk" frameborder="0" gesture="media" allowfullscreen=""></iframe>
 
+test 프로그램을 사용하여 검사하였습니다.
 
 <br/>
 <br/>
