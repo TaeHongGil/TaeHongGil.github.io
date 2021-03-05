@@ -1,7 +1,7 @@
 ---
 layout: post
 title: printf
-img: "assets/img/portfolio/printf.png"
+img: "assets/img/portfolio/printf.PNG"
 date: 02, 15 2021
 tags: [portfolio]
 ---
