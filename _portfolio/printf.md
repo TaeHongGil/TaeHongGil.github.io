@@ -2,13 +2,14 @@
 layout: post
 title: printf
 img: "assets/img/portfolio/printf.png"
-date: 09, 03 2020
+date: 02, 15 2021
 tags: [portfolio]
 ---
 
 ![image]({{ page.img | relative_url }})
 
 ## 설명
+
 c의
 printf를 구현했습니다.
 
