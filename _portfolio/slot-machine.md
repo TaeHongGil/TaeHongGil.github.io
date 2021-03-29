@@ -47,6 +47,8 @@ cocos2d-x 3.1 엔진으로 구현했습니다.
 <iframe width="640" height="360" src="https://www.youtube.com/embed/VdgkVyaskpo" frameborder="0" gesture="media" allowfullscreen=""></iframe>
 
 테스트는 체리의 확률를 90%로 하여 진행하였습니다.
+
+RTP 수정전 영상입니다.
 <br/>
 <br/>
 
